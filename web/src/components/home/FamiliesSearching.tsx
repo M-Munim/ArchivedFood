@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { WaitlistButton } from "./WaitlistButton";
+import { CertifyButton } from "./CertifyButton";
 import families from "@/../public/images/Group 1 (1).png";
 import mobileFamilies from "@/../public/images/HomeFrame 118.png";
 
@@ -38,7 +38,7 @@ export function FamiliesSearching() {
             >
               Schedule a call
             </Button>
-            <WaitlistButton
+            <CertifyButton
               variant="outline"
               size="hero"
               className="min-h-[45px] w-full"
@@ -76,7 +76,7 @@ export function FamiliesSearching() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <Button href="/book-a-call">Schedule a call</Button>
-              <WaitlistButton variant="outline" />
+              <CertifyButton variant="outline" />
             </div>
           </div>
         </div>

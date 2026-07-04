@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { WaitlistButton } from "./WaitlistButton";
+import { CertifyButton } from "./CertifyButton";
 import desktopHeroImg from "@/../public/images/HomeGroup 1.png";
 import mobileHeroImg from "@/../public/images/Frame 118.png";
 
@@ -28,8 +28,8 @@ export function Hero() {
       </div>
 
       {/* Copy */}
-      <div className="relative mx-auto -mt-4 max-w-[1320px] px-6 sm:mt-0 lg:px-10">
-        <div className="mx-auto w-full max-w-[306px] pb-7 text-center sm:max-w-none sm:py-8 lg:mx-0 lg:w-[48%] lg:py-20 lg:text-left">
+      <div className="relative mx-auto -mt-4 max-w-[1280px] px-6 sm:mt-0 lg:px-10 ">
+        <div className="mx-auto w-full max-w-[306px] pb-7 text-center sm:max-w-none sm:py-8 lg:mx-0 lg:w-[48%] lg:py-20 lg:text-left ">
           <h1 className="font-serif text-[30px] font-extrabold leading-[1.05] text-brand-orange sm:text-[52px] lg:text-[55px]">
             The standard of care for children with food allergies
           </h1>
@@ -44,7 +44,7 @@ export function Hero() {
           </p>
 
           <div className="mx-auto mt-[15px] flex w-full max-w-[268px] flex-col gap-3.5 sm:mt-8 sm:max-w-none sm:flex-row sm:gap-4 sm:justify-center lg:mx-0 lg:justify-start">
-            <WaitlistButton
+            <CertifyButton
               size="hero"
               className="min-h-[45px] w-full sm:w-auto"
             />

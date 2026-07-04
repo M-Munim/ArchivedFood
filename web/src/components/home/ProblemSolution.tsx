@@ -9,7 +9,7 @@ export function ProblemSolution() {
           narrower shared <Container> so the columns line up with the navbar:
           text starts under the logo, right edge ends under the "Book a call"
           button. */}
-      <div className="mx-auto w-full max-w-[1320px] px-6 sm:px-8 lg:px-10">
+      <div className="mx-auto w-full max-w-[1280px] px-6 sm:px-8 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-0">
           {/* The Problem */}
           <div className="lg:pr-14">
