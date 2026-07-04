@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette (sampled from the design) */
+  --color-brand-orange: #f46800;
+  --color-brand-yellow: #ffbc00;
+  --color-brand-teal: #188079;
+  --color-brand-mint: #c4efed;
+  --color-brand-peach: #fff1e1;
+  --color-brand-blue: #1583e0;
+  --color-brand-brightblue: #0089ff;
+  --color-brand-sky: #dbefff;
+  --color-brand-teal-dark: #084d56;
+  --color-brand-seafoam: #5bbaba;
+  --color-brand-cream: #f9e6cf;
+  --color-brand-blush: #ffe8db;
+  --color-brand-pink: #e24e9d;
+  --color-brand-red: #ea3a2d;
+
+  /* Darker, WCAG-AA-compliant variants for small text on white (>=4.5:1). */
+  --color-brand-orange-ink: #c25500;
+  --color-brand-pink-ink: #c53a83;
+
+  --color-ink: #111111;
+  --color-ink-muted: #3f3f3f;
+
+  /* Fonts */
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --site-header-height: 139px;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Keep Next.js route and anchor scrolling clear of the sticky header. */
+  scroll-padding-top: var(--site-header-height);
+}
+
+/* Keyboard focus baseline for any interactive element without its own focus
+   style. Elements with a custom focus ring (focus:ring-*) override this. */
+:focus-visible {
+  outline: 2px solid var(--color-brand-orange);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Respect users who prefer reduced motion: disable smooth scroll and neutralize
+   transitions/animations site-wide. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Type helpers matching the design spec (Desktop Typography page) */
+@layer components {
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.1;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .roi-range {
+    height: 28px;
+    cursor: pointer;
+    appearance: none;
+    background: transparent;
+  }
+
+  .roi-range::-webkit-slider-runnable-track {
+    height: 7px;
+    border-radius: 9999px;
+    background: #cfecea;
+  }
+
+  .roi-range::-webkit-slider-thumb {
+    width: 28px;
+    height: 28px;
+    margin-top: -10.5px;
+    appearance: none;
+    border: 3px solid white;
+    border-radius: 9999px;
+    background: #169d98;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  }
+
+  .roi-range::-moz-range-track {
+    height: 7px;
+    border-radius: 9999px;
+    background: #cfecea;
+  }
+
+  .roi-range::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border: 3px solid white;
+    border-radius: 9999px;
+    background: #169d98;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  }
+
+  .roi-range:focus-visible {
+    outline: none;
+  }
+
+  .roi-range:focus-visible::-webkit-slider-thumb {
+    box-shadow:
+      0 0 0 3px var(--color-brand-orange),
+      0 3px 10px rgb(0 0 0 / 20%);
+  }
+
+  .roi-range:focus-visible::-moz-range-thumb {
+    box-shadow:
+      0 0 0 3px var(--color-brand-orange),
+      0 3px 10px rgb(0 0 0 / 20%);
+  }
+}
+
+.liability-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1197px;
+  margin-inline: auto;
+}
+
+.liability-copy {
+  position: relative;
+  z-index: 10;
+  padding: 76px 24px;
+}
+
+.liability-image {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  margin-left: auto;
+}
+
+@media (min-width: 40rem) {
+  .liability-copy {
+    padding-inline: 32px;
+  }
+}
+
+@media (min-width: 64rem) {
+  .liability-frame {
+    min-height: 555px;
+  }
+
+  .liability-copy {
+    width: 65%;
+    /* padding: 90px 0 0 8.5%; */
+  }
+
+  .liability-image {
+    position: absolute;
+    top: 0;
+    right: min(0px, calc((1197px - 100vw) / 2));
+    width: 700px;
+    max-width: none;
+  }
+}
