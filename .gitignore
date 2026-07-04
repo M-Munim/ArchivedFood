@@ -1,0 +1,24 @@
+# Browser profiles from QA/automation sessions (do not commit)
+.chrome-while-qa*/
+
+# Node / build
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
