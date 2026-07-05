@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function BookACallPage() {
   return (
     <section className="bg-white py-14 sm:py-20">
-      <Container>
+      <Container className="px-6 sm:px-0">
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           {/* Intro — Amber's greeting */}
           <div>
