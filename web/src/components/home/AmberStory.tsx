@@ -27,14 +27,14 @@ export function AmberStory() {
             />
           </div>
 
-          <div className="lg:pt-9">
+          <div className="pt-9 pr-6 sm:pr-0">
             <Eyebrow>Amber&rsquo;s Story</Eyebrow>
             <h2 className="mt-4 font-serif text-[26px] font-bold leading-[1.15] text-ink sm:text-[36px]">
               Built by a mom who needed it to exist
             </h2>
           </div>
 
-          <div className="col-span-2 lg:col-span-1 lg:col-start-2">
+          <div className="col-span-2 px-6 sm:px-0 lg:col-span-1 lg:col-start-2">
             <div className="space-y-4 text-lg leading-[1.35] text-ink">
               <p>
                 When my son Xion was four months old, I put a little mango

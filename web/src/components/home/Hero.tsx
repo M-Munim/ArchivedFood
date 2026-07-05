@@ -29,12 +29,16 @@ export function Hero() {
 
       {/* Copy */}
       <div className="relative mx-auto -mt-4 max-w-[1280px] px-6 sm:mt-0 lg:px-10 ">
-        <div className="mx-auto w-full max-w-[306px] pb-7 text-center sm:max-w-none sm:py-8 lg:mx-0 lg:w-[48%] lg:py-20 lg:text-left ">
+        <div className="mx-auto w-full max-w-[306px] pb-7 text-center sm:max-w-none sm:py-8 lg:mx-0 lg:w-[58%] lg:py-20 lg:text-left">
           <h1 className="font-serif text-[30px] font-extrabold leading-[1.05] text-brand-orange sm:text-[52px] lg:text-[55px]">
-            The standard of care for children with food allergies
+            The standard of care{" "}
+            <br className="hidden lg:block" />
+            for children with{" "}
+            <br className="hidden lg:block" />
+            food allergies.
           </h1>
 
-          <p className="mx-auto mt-7 max-w-xl text-[15px] leading-[1.3] text-ink sm:mt-6 sm:text-lg sm:leading-[1.35] lg:mx-0 lg:mt-7">
+          <p className="mx-auto mt-7 max-w-2xl text-[15px] leading-[1.3] text-ink sm:mt-6 sm:text-lg sm:leading-[1.35] lg:mx-0 lg:mt-7">
             Food Allergy Certified helps childcare centers become the place food
             allergy families trust, choose, and never leave.
           </p>
@@ -43,16 +47,16 @@ export function Hero() {
             The only food allergy certification designed for childcare centers.
           </p>
 
-          <div className="mx-auto mt-[15px] flex w-full max-w-[268px] flex-col gap-3.5 sm:mt-8 sm:max-w-none sm:flex-row sm:gap-4 sm:justify-center lg:mx-0 lg:justify-start">
+          <div className="mx-auto mt-[15px] flex w-full max-w-[268px] flex-col gap-3.5 sm:mt-8 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 lg:mx-0 lg:justify-start lg:gap-3">
             <CertifyButton
               size="hero"
-              className="min-h-[45px] w-full sm:w-auto"
+              className="min-h-[45px] w-full whitespace-nowrap sm:w-auto lg:px-5 lg:text-[15px]"
             />
             <Button
               href="/for-parents"
               variant="outline"
               size="hero"
-              className="min-h-[45px] w-full sm:w-auto"
+              className="min-h-[45px] w-full whitespace-nowrap sm:w-auto lg:px-5 lg:text-[15px]"
             >
               I&rsquo;m a parent, keep me posted
             </Button>

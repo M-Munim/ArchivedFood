@@ -12,7 +12,7 @@ const AUDIENCE = [
 export function WhoThisIsFor() {
   return (
     <section className="relative bg-brand-orange py-16 sm:py-20">
-      <Container>
+      <Container className="px-6 sm:px-0">
         <div className="mx-auto max-w-4xl text-center">
           <Eyebrow>Who This Is For</Eyebrow>
           <h2 className="mt-4 font-serif text-[32px] font-bold leading-[1.15] text-ink sm:text-[40px]">
@@ -20,13 +20,13 @@ export function WhoThisIsFor() {
           </h2>
         </div>
 
-        <ul className="mx-auto mt-10 max-w-5xl space-y-1 text-lg leading-[1.35] text-ink">
+        <ul className="mx-auto mt-10 max-w-3xl space-y-2 text-left text-lg leading-[1.35] text-ink">
           {AUDIENCE.map((item) => (
-            <li key={item} className="flex gap-3 text-lg">
-              <span aria-hidden="true" className=" select-none">
+            <li key={item} className="relative pl-5">
+              <span aria-hidden="true" className="absolute left-0 select-none">
                 &bull;
               </span>
-              <span>{item}</span>
+              {item}
             </li>
           ))}
         </ul>

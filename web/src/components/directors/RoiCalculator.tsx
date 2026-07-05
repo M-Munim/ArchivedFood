@@ -64,7 +64,7 @@ export function RoiCalculator() {
 
   return (
     <section className="relative bg-brand-seafoam py-12 sm:py-14">
-      <Container>
+      <Container className="px-6 sm:px-0">
         <div className="mx-auto max-w-[880px]">
           <div className="text-center">
             <Eyebrow>ROI Calculator</Eyebrow>

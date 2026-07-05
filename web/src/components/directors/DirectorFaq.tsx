@@ -17,75 +17,75 @@ const FAQ = [
   },
   {
     q: "Do all staff members need to be certified?",
-    a: "We recommend certifying every staff member who works directly with children. Your center earns official FAC Certified status once all of your designated staff have passed.",
+    a: "We recommend it. Every person who cares for children should feel confident and prepared.",
   },
   {
     q: "How is this different from ServSafe or other food training?",
-    a: "ServSafe and similar programs are built for restaurants and general food handling. FAC is built specifically for childcare — the situations, ages, and emergencies your team actually faces every day.",
+    a: "ServSafe and similar programs are built for restaurants and food service. FAC is built specifically for childcare environments and the real situations that come up when you're caring for young children.",
   },
   {
     q: "Do you cover emergency response?",
-    a: "Yes. An entire module is devoted to recognizing a reaction early, using epinephrine, calling 911, and keeping a child calm until help arrives.",
+    a: "Yes. Your staff learns to recognize the signs of a reaction, when to use epinephrine, and exactly what to do while emergency services are on the way.",
   },
   {
     q: "How long does certification last?",
-    a: "Certification is valid for one year. We'll remind you when it's time to renew so your center stays current and ready.",
+    a: "Certification is valid for one year. Annual renewal keeps your team current with the latest guidelines.",
   },
   {
     q: "How much does it cost?",
-    a: "Pricing is based on the size of your center and the number of staff. Book a quick call and we'll put together what makes sense for you.",
+    a: "Certification is priced to your center. We don't believe in one-size-fits-all pricing. Book a call and we'll build a custom enterprise plan for your team.",
   },
   {
     q: "What happens after we're certified?",
-    a: "You receive your digital badge, a physical window decal, your Parent Trust Kit, and a listing in our directory so families can find you.",
+    a: "Your center receives the FAC badge, the window decal, and the Parent Trust Kit so you can share your certification with families right away. You're also listed in the FAC Certified Center Directory when it launches.",
   },
   {
     q: "Is this available nationwide?",
-    a: "Yes. FAC is fully online and available to childcare centers, daycares, and early education providers across the country.",
+    a: "Yes. Food Allergy Certified is available to childcare centers across the United States.",
   },
   {
     q: "What if a staff member leaves and we hire someone new?",
-    a: "New team members can complete the training at any time. Keeping your whole team certified is what keeps your center's status active.",
+    a: "New staff members can complete the training individually and receive their own certificate. Your center's certified status stays intact.",
   },
   {
     q: "How fast will I see a return on this?",
-    a: "Often with a single enrollment. One food allergy family who chooses you because you're certified can cover your investment many times over.",
+    a: "The national average for center-based childcare is over $13,000 per child per year. In premium markets it's $20,000 or more. If certification helps you earn the trust of one family who was on the fence, your investment pays for itself many times over, every year that child is enrolled. Most centers see the return before the ink is dry.",
   },
   {
     q: "Can I use this in my marketing right away?",
-    a: "Yes. The moment you're certified you can display your badge on your website, social profiles, and front door.",
+    a: "Yes. The moment your center is certified you receive your FAC badge for your website and social profiles, a physical window decal for your entrance, and a Parent Trust Kit with ready-to-use email templates, social posts, and print flyers. You can start telling families the same day.",
   },
   {
     q: "Will this help me justify a higher tuition rate?",
-    a: "Certification signals a higher standard of care, which is exactly what families in premium markets are looking for and willing to pay for.",
+    a: "Absolutely. FAC certification is a visible, verifiable differentiator. Families who are already paying a premium for childcare are doing it because safety and quality matter to them. Certification gives you the proof point that supports the rate you're charging and makes it easier to hold that rate with confidence.",
   },
   {
     q: "How do I use this to win families who are comparing me to another center?",
-    a: "The badge answers the question before a parent asks it. When one center is certified and the other isn't, the choice makes itself.",
+    a: "When a family is deciding between your center and another, the FAC badge is a concrete reason to choose you. Train your staff to mention it naturally on tours. Put the window decal where parents see it the moment they walk in. Let the certification do the talking before you say a word.",
   },
   {
     q: "What do I say to a parent who asks about it on a tour?",
-    a: "Tell them your staff completed a childcare-specific food allergy standard, passed an exam, and is trained to prevent and respond to reactions. Your Parent Trust Kit gives you the exact language.",
+    a: "We make that easy. Your Parent Trust Kit includes talking points and templated language so your staff can answer confidently and consistently. You never have to wing it.",
   },
   {
     q: "Does this help with insurance or licensing?",
-    a: "FAC is a training and certification standard, not a substitute for licensing. Many directors find that documented, structured training strengthens their position with insurers and licensors.",
+    a: "FAC certification demonstrates a documented, structured standard of care for food allergy safety. Many centers find this valuable in conversations with insurers and licensing bodies. We recommend checking with your specific provider on coverage implications.",
   },
   {
     q: "I have multiple locations. How does pricing work?",
-    a: "We offer plans for franchises and regional operators. Reach out and we'll build pricing that covers every location.",
+    a: "Book a call and we'll build a custom enterprise plan for your team.",
   },
   {
     q: "How do I get listed in the directory so parents can find me?",
-    a: "Once your center is certified, we add you to the public directory automatically so food allergy families searching in your area can find you.",
+    a: "Every FAC Certified center is automatically listed in the FAC Certified Center Directory when it launches. Parents search by zip code to find certified centers near them. Being listed means food allergy families in your area can find you before they find anyone else.",
   },
   {
     q: "Will FAC help me create the marketing materials or do I have to do that myself?",
-    a: "Your Parent Trust Kit includes ready-to-use materials, so you don't have to start from scratch.",
+    a: "Your Parent Trust Kit has everything ready to use. Email templates, social posts, and print flyers are all included. You customize them with your center's name and you're done. No design work required.",
   },
   {
     q: "Can I get certified before all my staff complete the training?",
-    a: "Individual staff receive their certificates as they pass. Your center earns official FAC Certified status once all designated staff have completed the standard.",
+    a: "Certification is granted once all designated staff have passed the final assessment. The training is 90 minutes and fully online, so your team can move through it quickly. Most centers are certified and ready to market within a week of enrolling.",
   },
 ];
 
@@ -103,7 +103,7 @@ export function DirectorFaq() {
 
   return (
     <section className="relative bg-white py-16">
-      <Container>
+      <Container className="px-6 sm:px-0">
         <div className="text-center">
           <Eyebrow>Commonly Asked Questions</Eyebrow>
           <h2 className="mt-3 font-serif text-[30px] font-bold leading-tight text-ink sm:text-[34px]">

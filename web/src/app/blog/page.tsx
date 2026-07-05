@@ -20,9 +20,9 @@ export default function BlogPage() {
           <h1 className="mt-4 font-serif text-[40px] font-extrabold leading-[1.05] text-brand-teal-dark sm:text-[56px]">
             Guidance worth sharing is on the way.
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-[1.4] text-ink sm:text-xl">
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-[1.4] text-ink sm:text-xl px-4 text-justify">
             We&rsquo;re writing practical, no-jargon articles on food allergy
-            safety for childcare centers and families — from spotting a reaction
+            safety for childcare centers and families, from spotting a reaction
             early to building trust with allergy parents.
           </p>
           <p className="mt-4 text-lg font-semibold text-ink">Coming soon.</p>

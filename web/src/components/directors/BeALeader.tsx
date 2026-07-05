@@ -42,7 +42,7 @@ function BulletList({
 export function BeALeader() {
   return (
     <section className="relative bg-brand-brightblue py-16 sm:py-20">
-      <Container className="sm:hidden">
+      <Container className="px-6 sm:hidden">
         <div className="mx-auto max-w-[309px] text-center">
           <Eyebrow>Be a Leader</Eyebrow>
           <h2 className="mt-4 font-serif text-[28px] font-bold leading-[1.08] text-ink">

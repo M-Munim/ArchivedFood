@@ -6,40 +6,40 @@ import { FaqList, type FaqItem } from "@/components/ui/FaqList";
 // are authored to match the site's voice.
 const FAQ: FaqItem[] = [
   {
-    q: "How long does the certification take?",
-    a: "Most staff complete the full standard in about 90 minutes.",
+    q: "How do I know the staff actually learned this and didn't just click through?",
+    a: "Every staff member takes a final assessment before receiving their individual certificate. It's not a participation trophy. They have to pass. That's what makes the certification worth something, and what makes it worth something to you.",
   },
   {
     q: "What happens if my child has a reaction at a certified center?",
-    a: "Staff at a certified center are trained to recognize a reaction early, respond immediately, use epinephrine when needed, and call 911 while keeping your child calm. Everyone who cares for your child has practiced exactly what to do.",
+    a: "FAC Certified staff are trained to recognize reactions early, respond immediately, administer epinephrine correctly, and follow the 911 protocol while keeping your child calm. Certification doesn't guarantee a reaction won't happen. It means the people in that room know exactly what to do when it does.",
   },
   {
     q: "My child has multiple allergies. Does this cover all of them?",
-    a: "Yes. The training covers the top nine allergens and the principles of preventing cross-contact, so it applies no matter how many allergies your child has.",
+    a: "Yes. FAC covers all 9 major allergens recognized by the FDA including milk, eggs, peanuts, tree nuts, wheat, soy, fish, shellfish, and sesame. Staff also learn that reactions don't look the same from child to child, which is why following your child's individual allergy plan is built into the standard.",
   },
   {
     q: "My child has FPIES, not a traditional allergy. Is this relevant for us?",
-    a: "Yes. The prevention, communication, and care-plan practices in the standard apply to FPIES and other food-related conditions, not just IgE allergies.",
+    a: "Yes. FAC helps staff understand that food reactions take many forms and that no two children respond the same way. Staff are trained to know and follow each child's individual care plan, which is the foundation of safe care for any food-related condition.",
   },
   {
     q: "What's the difference between FAC Certified and a center that just says they're allergy aware?",
-    a: "“Allergy aware” is a claim anyone can make. FAC Certified means every designated staff member completed a structured, childcare-specific standard and passed an exam. It's proof, not a promise.",
+    a: "Anyone can say they're allergy aware. FAC Certified means the staff completed a structured, expert-reviewed training standard, passed a final assessment, and earned a certification that has to be renewed every year. It's the difference between a promise and proof.",
   },
   {
     q: "What if a new staff member is hired after certification?",
-    a: "New staff can complete the training at any time. Certified centers keep their whole team current so your child is always cared for by trained staff.",
+    a: "New staff can complete the training individually and receive their own certificate. Your child's center maintains its certified status and your child stays protected.",
   },
   {
     q: "Can I see what the training actually covers?",
-    a: "Yes. The certification covers six modules — understanding allergies, recognizing reactions, emergency response, prevention, communication and care plans, and ongoing readiness. You can review the full curriculum on our Certification page.",
+    a: "Yes. The full curriculum is outlined on our Certification page. Six modules covering everything from recognizing early reaction signs to emergency response to building an allergy-safe classroom culture.",
   },
   {
     q: "How do I find a certified center near me?",
-    a: "We're building a national directory of certified centers. Join the waitlist above and we'll let you know the moment a certified center opens in your area.",
+    a: "Join the parent waitlist and we'll notify you the moment a certified center opens in your area. The FAC Certified Center Directory launches with our first wave of certified centers.",
   },
   {
     q: "Who created this and why should I trust it?",
-    a: "Food Allergy Certified was built by a parent of a child with food allergies, in collaboration with pediatric allergists, emergency medicine doctors, and early childhood educators. Read Amber's story to learn why.",
+    a: "FAC was built by Amber Omran, a mom of a child with multiple food allergies including milk, peanuts, eggs, tree nuts, wheat, and FPIES. She built this because she couldn't find a childcare center she trusted enough for her own son. The curriculum has been reviewed by a board-certified pediatric allergist for clinical accuracy.",
   },
 ];
 
@@ -53,7 +53,7 @@ export function ParentFaq() {
             Parent FAQ
           </h2>
         </div>
-        <div className="mt-7">
+        <div className="mt-7 px-6">
           <FaqList items={FAQ} initialCount={5} />
         </div>
       </Container>

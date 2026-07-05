@@ -28,7 +28,7 @@ export default function DirectoryPage() {
         />
 
         <div className="-mt-[13vw] bg-brand-blush pb-14">
-          <div className="relative mx-auto max-w-[350px] px-4 pt-5 text-center">
+          <div className="relative mx-auto max-w-[350px]  pt-5 text-center">
             <h1 className="font-serif text-[31px] font-extrabold leading-[1.08] text-brand-orange">
               Find a food allergy certified childcare center near you.
             </h1>
@@ -37,7 +37,7 @@ export default function DirectoryPage() {
               COMING SOON
             </p>
 
-            <p className="mx-auto mt-5 max-w-[300px] text-[15px] leading-[1.18] text-ink">
+            <p className="mx-auto mt-5 max-w-[350px] text-[15px] leading-[1.18] text-ink">
               We&rsquo;re building a national directory of FAC Certified centers.
               It launches when our first certified centers are ready to be found.
             </p>

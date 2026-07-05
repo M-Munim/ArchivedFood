@@ -29,7 +29,7 @@ export function FinalAssessment() {
         </p>
 
         {/* Expert card */}
-        <div className="mx-auto mt-8 max-w-[350px] overflow-hidden rounded-[24px] border border-ink bg-transparent text-left">
+        <div className="mx-auto mt-8 mb-5 max-w-[350px] overflow-hidden rounded-[24px] border border-ink bg-transparent text-left">
           <div className="px-5 py-5">
             <h3 className="text-center text-[21px] font-semibold leading-tight text-ink">
               An expert weighs in

@@ -55,13 +55,13 @@ export default function AmbersStoryPage() {
           }}
         />
         <div className="mx-auto max-w-[1110px] px-6 pt-5 sm:pt-10 lg:pt-[178px]">
-          <h1 className="mx-auto max-w-[319px] text-center font-serif text-[31px] font-extrabold leading-[1.08] text-brand-teal-dark sm:mx-0 sm:max-w-[500px] sm:text-left sm:text-[38px] lg:text-[50px]">
+          <h1 className="mx-auto max-w-[349px] text-center font-serif text-[31px] font-extrabold leading-[1.08] text-brand-teal-dark sm:mx-0 sm:max-w-[500px] sm:text-left sm:text-[38px] lg:text-[50px]">
             I didn&rsquo;t build this as a business. I built it as a mom.
           </h1>
 
           <div
             data-testid="amber-story-copy"
-            className="mx-auto max-w-[319px] sm:mx-0 sm:max-w-[720px]"
+            className="mx-auto max-w-[349px] sm:mx-0 sm:max-w-[720px] text-justify"
           >
             <p className="mt-8 text-[15px] font-semibold leading-[1.35] text-ink sm:mt-10">
               Xion was four months old.

@@ -9,9 +9,9 @@ export function JoinCommunity() {
 
   return (
     <section id="community" className="scroll-mt-24 bg-brand-mint py-14">
-      <Container>
+      <Container className="px-6 sm:px-0">
         <div className="mx-auto max-w-[760px] text-left sm:text-center">
-          <div className="mx-auto max-w-[314px] sm:max-w-none">
+          <div className="mx-auto">
             <h2 className="text-[28px] font-extrabold uppercase leading-[1.05] tracking-wide text-ink sm:text-[24px] sm:leading-none">
               Join our community
             </h2>

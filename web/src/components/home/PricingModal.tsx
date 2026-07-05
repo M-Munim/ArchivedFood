@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { IoClose } from "react-icons/io5";
 
 const FOCUSABLE_SELECTOR =
@@ -85,7 +86,7 @@ export function PricingModal({ onClose }: { onClose: () => void }) {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[120] flex items-center justify-center bg-black/65 p-4 sm:p-6"
       onMouseDown={(event) => {
@@ -272,6 +273,7 @@ export function PricingModal({ onClose }: { onClose: () => void }) {
           </>
         )}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

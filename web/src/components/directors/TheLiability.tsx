@@ -17,7 +17,7 @@ export function TheLiability() {
           />
         </div>
 
-        <div className="mx-auto w-full max-w-[313px] px-7 pb-9 pt-0">
+        <div className="mx-auto w-full max-w-[348px]  pb-9 pt-0">
           <Eyebrow className="text-[13px]">The Liability</Eyebrow>
           <h2 className="mt-3 font-serif text-[28px] font-bold leading-[1.05] text-ink">
             A trained staff is a protected staff

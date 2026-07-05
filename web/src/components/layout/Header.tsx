@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
+import { CertifyButton } from "@/components/home/CertifyButton";
 import { mainNav } from "@/lib/site";
 
 export function Header() {
@@ -56,17 +57,17 @@ export function Header() {
             <Button href="/login" variant="outline" size="sm">
               Login
             </Button>
-            <Button href="/book-a-call" variant="mint" size="sm">
-              Book a call
-            </Button>
+            <CertifyButton variant="mint" size="sm">
+              Request a Spot
+            </CertifyButton>
           </div>
         </div>
 
-        {/* Mobile: Book a call + hamburger */}
+        {/* Mobile: Request a Spot + hamburger */}
         <div className="flex items-center gap-2 sm:gap-3 xl:hidden">
-          <Button href="/book-a-call" variant="mint" size="header">
-            Book a call
-          </Button>
+          <CertifyButton variant="mint" size="header">
+            Request a Spot
+          </CertifyButton>
           <button
             type="button"
             aria-label="Toggle menu"

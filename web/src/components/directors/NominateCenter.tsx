@@ -115,7 +115,7 @@ export function NominateCenter() {
   return (
     <>
       <section className="relative overflow-hidden bg-brand-brightblue py-14 sm:py-16">
-        <Container className="sm:hidden">
+        <Container className="px-6 sm:hidden">
           <div className="mx-auto max-w-[308px]">
             <div className="grid grid-cols-[1fr_106px] items-start gap-3">
               <div>

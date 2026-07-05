@@ -316,7 +316,7 @@ export function AssessmentCta() {
         id="assessment"
         className="relative bg-brand-cream py-16 sm:py-20"
       >
-        <Container>
+        <Container className="px-6 sm:px-0">
           <div className="mx-auto max-w-5xl text-center ">
             <Eyebrow>Is Your Center Food Allergy Ready?</Eyebrow>
             <h2 className="mt-4 font-serif text-[32px] font-bold leading-[1.15] text-ink sm:text-[40px]">
@@ -327,24 +327,20 @@ export function AssessmentCta() {
               roadmap for your team.
             </p>
 
-            <ul className="mx-auto mt-8 max-w-5xl space-y-1 text-left text-lg leading-[1.35] text-ink ">
-              <li className="flex gap-3">
-                <span aria-hidden="true" className="mt-1 select-none">
+            <ul className="mx-auto mt-8 max-w-2xl space-y-2 text-left text-lg leading-[1.35] text-ink">
+              <li className="relative pl-5">
+                <span aria-hidden="true" className="absolute left-0 select-none">
                   &bull;
                 </span>
-                <span>
-                  <span className="font-semibold">Custom Plan:</span> A tailored
-                  training roadmap based on your center&rsquo;s specific needs
-                </span>
+                <span className="font-semibold">Custom Plan:</span> A tailored
+                training roadmap based on your center&rsquo;s specific needs
               </li>
-              <li className="flex gap-3">
-                <span aria-hidden="true" className="mt-1 select-none">
+              <li className="relative pl-5">
+                <span aria-hidden="true" className="absolute left-0 select-none">
                   &bull;
                 </span>
-                <span>
-                  <span className="font-semibold">Free Resources:</span> Access
-                  to premium training materials at no cost
-                </span>
+                <span className="font-semibold">Free Resources:</span> Access
+                to premium training materials at no cost
               </li>
             </ul>
 

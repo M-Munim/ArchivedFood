@@ -56,7 +56,7 @@ function StepBadge({
 export function HowItWorks() {
   return (
     <section className="pb-8 sm:pb-16 lg:pb-20">
-      <Container>
+      <Container className="px-6 sm:px-0">
         <div className="mx-auto max-w-3xl text-left sm:text-center">
           <Eyebrow>How It Works</Eyebrow>
           <h2 className="mt-4 font-serif text-[30px] font-bold leading-[1.15] text-ink sm:text-[38px]">

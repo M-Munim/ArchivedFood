@@ -57,7 +57,7 @@ export function CenterReceives() {
 
   return (
     <section className="relative bg-white pb-12 pt-14 sm:pb-[48px] sm:pt-[52px]">
-      <Container>
+      <Container className="px-6 sm:px-0">
         <div className="mx-auto text-center">
           <Eyebrow>What Your Center Receives</Eyebrow>
           <h2 className="mx-auto mt-3 max-w-[575px] font-serif text-[30px] font-bold leading-[1.05] text-ink sm:text-4xl">
@@ -84,7 +84,7 @@ export function CenterReceives() {
                 <FaChevronLeft className="h-5 w-5" aria-hidden="true" />
               </button>
 
-              <div className="relative mx-auto h-[260px] w-full sm:h-[350px]">
+              <div className="relative mx-auto h-[200px] w-full sm:h-[280px] ">
                 <Image
                   src={item.image}
                   alt={item.title}

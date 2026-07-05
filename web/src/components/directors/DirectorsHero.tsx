@@ -15,9 +15,9 @@ export function DirectorsHero() {
         className="h-auto w-full sm:hidden"
       />
 
-      <div className="mx-auto w-full max-w-[323px] px-5 pb-9 pt-5 sm:hidden">
+      <div className="mx-auto w-full max-w-[343px]  pb-9 pt-5 sm:hidden">
         <h1 className="font-serif text-[31px] font-extrabold leading-[0.98] text-white">
-          One new enrollment pays for this. The peace of mind is priceless.
+          One new enrollment pays for this. The peace of mind is priceless..
         </h1>
 
         <p className="mt-7 text-[15px] leading-[1.24] text-white/90">
