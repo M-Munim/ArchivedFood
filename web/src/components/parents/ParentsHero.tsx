@@ -41,11 +41,11 @@ export function ParentsHero() {
             alt=""
             sizes="100vw"
             data-testid="parents-wave"
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-auto w-full"
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-[22vw] w-full object-cover object-top"
           />
         </div>
 
-        <Container className="pb-0 pt-3 text-center">
+        <Container className="pb-0 pt-0 text-center">
           <h1 className="mx-auto max-w-[316px] font-serif text-[28px] font-extrabold leading-[1.02] text-brand-teal">
             <span className="block">You should not</span>
             <span className="block">have to wonder if</span>

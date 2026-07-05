@@ -16,7 +16,7 @@ export default function BlogPage() {
     <>
       <section className="bg-white py-16 sm:py-24">
         <Container className="max-w-2xl text-center">
-          <Eyebrow className="text-brand-pink-ink">The Blog</Eyebrow>
+          <Eyebrow className="text-ink">The Blog</Eyebrow>
           <h1 className="mt-4 font-serif text-[40px] font-extrabold leading-[1.05] text-brand-teal-dark sm:text-[56px]">
             Guidance worth sharing is on the way.
           </h1>

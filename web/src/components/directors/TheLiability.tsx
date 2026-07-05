@@ -7,7 +7,7 @@ export function TheLiability() {
   return (
     <section className="relative bg-brand-yellow">
       <div className="sm:hidden">
-        <div className="ml-auto w-full max-w-[225px]">
+        <div className="ml-auto w-full">
           <Image
             src={liabilityImg}
             alt="A caregiver and children eating fresh fruit together at a table"

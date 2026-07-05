@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Button } from "@/components/ui/Button";
+import { CertifyButton } from "@/components/home/CertifyButton";
 import { JoinCommunity } from "@/components/home/JoinCommunity";
 import { LetsGetSocial } from "@/components/home/LetsGetSocial";
 import amber from "@/../public/images/Group 1.png";
@@ -47,14 +49,14 @@ export default function AmbersStoryPage() {
           alt="Amber, the founder, smiling with her young son Xion"
           priority
           sizes="(min-width: 1024px) 50vw, 100vw"
-          className="hidden h-auto w-full sm:block lg:float-right lg:w-[50vw] lg:max-w-[640px]"
+          className="hidden h-auto w-full sm:block lg:float-right lg:w-[58vw] lg:max-w-[760px]"
           style={{
             shapeOutside: 'url("/images/Group 1.png")',
             shapeImageThreshold: 0.1,
             shapeMargin: "14px",
           }}
         />
-        <div className="mx-auto max-w-[1110px] px-6 pt-5 sm:pt-10 lg:pt-[178px]">
+        <div className="mx-auto max-w-[1320px] px-5 pt-5 sm:px-6 sm:pt-10 lg:px-14 lg:pt-[178px]">
           <h1 className="mx-auto max-w-[349px] text-center font-serif text-[31px] font-extrabold leading-[1.08] text-brand-teal-dark sm:mx-0 sm:max-w-[500px] sm:text-left sm:text-[38px] lg:text-[50px]">
             I didn&rsquo;t build this as a business. I built it as a mom.
           </h1>
@@ -82,6 +84,18 @@ export default function AmbersStoryPage() {
                 <p key={p}>{p}</p>
               ))}
             </div>
+          </div>
+
+          <div className="mx-auto mt-8 flex max-w-[349px] flex-col gap-3.5 sm:hidden">
+            <CertifyButton size="hero" className="min-h-[45px] w-full whitespace-nowrap" />
+            <Button
+              href="/for-parents"
+              variant="outline"
+              size="hero"
+              className="min-h-[45px] w-full whitespace-nowrap"
+            >
+              I&rsquo;m a parent, keep me posted
+            </Button>
           </div>
 
           <div className="clear-both" />

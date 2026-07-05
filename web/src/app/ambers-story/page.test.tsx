@@ -10,7 +10,7 @@ describe("AmbersStoryPage", () => {
       name: "Amber, the founder, smiling with her young son Xion",
     });
 
-    expect(portrait).toHaveClass("lg:float-right", "lg:w-[50vw]");
+    expect(portrait).toHaveClass("lg:float-right", "lg:w-[58vw]");
     expect(portrait).toHaveStyle({
       shapeOutside: 'url("/images/Group 1.png")',
     });
