@@ -4,7 +4,7 @@ import wave from "@/../public/images/Vector.png";
 
 export function CertHero() {
   return (
-    <section className="relative min-h-[576px] overflow-hidden bg-brand-sky">
+    <section className="relative overflow-hidden bg-brand-sky sm:min-h-[576px]">
       <Image
         src={wave}
         alt=""
