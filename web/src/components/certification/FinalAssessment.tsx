@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import certBadge from "@/../public/images/Group 3.png";
 import introBackground from "@/../public/images/Intro Background Shape.png";
+import introBackgroundMobile from "@/../public/images/Decorative Shape.png";
 import allergist from "@/../public/images/nelly-padfield.jpeg";
 
 export function FinalAssessment() {
@@ -60,11 +61,18 @@ export function FinalAssessment() {
       </div>
 
       <Image
+        src={introBackgroundMobile}
+        alt="A certified center storefront displaying the Food Allergy Certified decal"
+        data-testid="intro-background-shape-mobile"
+        sizes="100vw"
+        className="h-auto w-full sm:hidden"
+      />
+      <Image
         src={introBackground}
         alt="A certified center storefront displaying the Food Allergy Certified decal"
         data-testid="intro-background-shape"
         sizes="100vw"
-        className="h-auto w-full"
+        className="hidden h-auto w-full sm:block"
       />
     </section>
   );
