@@ -30,7 +30,7 @@ const STATS: Stat[] = [
       "happen in preschools and childcare facilities.",
     ],
     source: "Source: Food Allergy Research & Education (foodallergy.org)",
-    bg: "#5bbaba",
+    bg: "#5cbaba",
     image: statTwo,
   },
   {
@@ -39,7 +39,7 @@ const STATS: Stat[] = [
       "in children with no prior allergy diagnosis.",
     ],
     source: "Source: Food Allergy Research & Education (foodallergy.org)",
-    bg: "#0089ff",
+    bg: "#008aff",
     image: statThree,
   },
   {
@@ -48,7 +48,7 @@ const STATS: Stat[] = [
       "received food allergy training.",
     ],
     source: "Source: FARE early-childhood training data (foodallergy.org)",
-    bg: "#f46800",
+    bg: "#f56900",
     image: statFour,
   },
 ];

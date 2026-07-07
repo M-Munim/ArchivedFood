@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { CertHero } from "./CertHero";
 
@@ -12,8 +12,20 @@ describe("CertHero", () => {
       }),
     ).toBeInTheDocument();
     expect(screen.getByTestId("certification-wave")).toHaveAttribute("alt", "");
+  });
+
+  it("opens the certification lead form when the CTA is clicked", () => {
+    render(<CertHero />);
+
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    fireEvent.click(
+      screen.getByRole("button", { name: "Get your center certified" }),
+    );
+
+    const dialog = screen.getByRole("dialog");
+    expect(dialog).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: "Get your center certified" }),
-    ).toHaveAttribute("href", "/book-a-call");
+      screen.getByRole("heading", { name: "Get your center certified" }),
+    ).toBeInTheDocument();
   });
 });

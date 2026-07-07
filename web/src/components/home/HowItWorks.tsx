@@ -62,7 +62,7 @@ export function HowItWorks() {
           <h2 className="mt-4 font-serif text-[30px] font-bold leading-[1.15] text-ink sm:text-[38px]">
             Simple to implement. Powerful to show.
           </h2>
-          <p className="mt-3 text-lg font-semibold text-ink">
+          <p className="mt-3 text-body font-semibold text-ink">
             Built by a parent. Backed by experts.
           </p>
         </div>
@@ -78,7 +78,7 @@ export function HowItWorks() {
               />
               <div className="pt-1">
                 <h3 className="text-lg font-semibold text-ink">{step.title}</h3>
-                <p className="mt-1 text-lg leading-[1.35] text-ink">
+                <p className="mt-1 text-body text-ink">
                   {step.body}
                 </p>
               </div>

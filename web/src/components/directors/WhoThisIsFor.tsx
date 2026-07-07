@@ -20,7 +20,7 @@ export function WhoThisIsFor() {
           </h2>
         </div>
 
-        <ul className="mx-auto mt-10 max-w-3xl space-y-2 text-left text-lg leading-[1.35] text-ink">
+        <ul className="mx-auto mt-10 max-w-3xl space-y-2 text-left text-body text-ink">
           {AUDIENCE.map((item) => (
             <li key={item} className="relative pl-5">
               <span aria-hidden="true" className="absolute left-0 select-none">

@@ -65,11 +65,11 @@ export default function AmbersStoryPage() {
             data-testid="amber-story-copy"
             className="mx-auto max-w-[349px] sm:mx-0 sm:max-w-[720px] text-justify"
           >
-            <p className="mt-8 text-[15px] font-semibold leading-[1.35] text-ink sm:mt-10">
+            <p className="mt-8 text-body font-semibold text-ink sm:mt-10">
               Xion was four months old.
             </p>
 
-            <div className="mt-2 space-y-3 text-[15px] leading-[1.28] text-ink sm:leading-[1.35]">
+            <div className="mt-2 space-y-3 text-body text-ink">
               {PARAGRAPHS.map((p) => (
                 <p key={p}>{p}</p>
               ))}

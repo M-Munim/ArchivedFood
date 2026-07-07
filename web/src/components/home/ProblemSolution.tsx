@@ -30,11 +30,11 @@ export function ProblemSolution() {
               />
             </div>
 
-            <p className="mt-6 text-lg font-semibold leading-[1.35] text-ink">
+            <p className="mt-6 text-body font-semibold text-ink">
               They&rsquo;re deciding who they trust with their child&rsquo;s life.
             </p>
 
-            <div className="mt-5 space-y-4 text-lg leading-[1.35] text-ink">
+            <div className="mt-5 space-y-4 text-body text-ink">
               <p>
                 And when they visit your center, they&rsquo;re looking for a
                 signal. Something that tells them your staff is trained,
@@ -67,7 +67,7 @@ export function ProblemSolution() {
               />
             </div>
 
-            <div className="mt-6 space-y-4 text-lg leading-[1.35] text-ink">
+            <div className="mt-6 space-y-4 text-body text-ink">
               <p>
                 Built by a parent of a child with food allergies, in
                 collaboration with pediatric allergists, emergency medicine

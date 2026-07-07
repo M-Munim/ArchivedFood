@@ -95,13 +95,13 @@ export function ParentsHero() {
             <span className="block">child is safe.</span>
           </h1>
 
-          <p className="mx-auto mt-7 max-w-[620px] text-lg leading-[1.35] text-ink sm:text-xl">
+          <p className="mx-auto mt-7 max-w-[620px] text-body text-ink">
             We are building a national directory of FAC Certified childcare
             centers. Places where the staff is trained, the protocols are in
             place, and food allergy children are truly looked after.
           </p>
 
-          <p className="mx-auto mt-6 max-w-[620px] text-lg font-semibold leading-[1.35] text-ink sm:text-xl">
+          <p className="mx-auto mt-6 max-w-[620px] text-body font-semibold text-ink">
             Join the waitlist and we will let you know the moment a certified
             center opens in your area.
           </p>

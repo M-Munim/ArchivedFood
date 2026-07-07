@@ -138,7 +138,7 @@ export function DirectorFaq() {
                   )}
                 </button>
                 {isOpen && (
-                  <p className="pb-2 pr-10 text-lg leading-[1.35] text-ink/80">
+                  <p className="pb-2 pr-10 text-body text-ink/80">
                     {item.a}
                   </p>
                 )}

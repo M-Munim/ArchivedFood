@@ -209,7 +209,7 @@ function AssessmentModal({
               Thank you!
             </h2>
 
-            <p className="mt-3 max-w-[460px] text-base leading-[1.4] text-ink/80 sm:text-lg">
+            <p className="mt-3 max-w-[460px] text-body text-ink/80">
               You&rsquo;ve completed the food allergy safety assessment. We&rsquo;ve
               put together a personalized set of free resources to help your center
               become food allergy ready.
@@ -322,12 +322,12 @@ export function AssessmentCta() {
             <h2 className="mt-4 font-serif text-[32px] font-bold leading-[1.15] text-ink sm:text-[40px]">
               Is your center food allergy ready?
             </h2>
-            <p className="mt-4 text-lg max-w-xl m-auto font-semibold text-ink">
+            <p className="mt-4 text-body max-w-xl m-auto font-semibold text-ink">
               Take this quick assessment and receive a free, personalized
               roadmap for your team.
             </p>
 
-            <ul className="mx-auto mt-8 max-w-2xl space-y-2 text-left text-lg leading-[1.35] text-ink">
+            <ul className="mx-auto mt-8 max-w-2xl space-y-2 text-left text-body text-ink">
               <li className="relative pl-5">
                 <span aria-hidden="true" className="absolute left-0 select-none">
                   &bull;

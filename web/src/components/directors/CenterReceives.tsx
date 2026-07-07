@@ -111,7 +111,7 @@ export function CenterReceives() {
             </div>
 
             <figcaption className="mx-auto mt-10 max-w-[460px] sm:mt-12">
-              <p className="text-lg leading-[1.25] text-ink">
+              <p className="text-body text-ink">
                 <span className="font-semibold">{item.title}</span>{" "}
                 {item.caption}
               </p>

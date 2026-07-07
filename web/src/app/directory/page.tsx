@@ -89,7 +89,7 @@ export default function DirectoryPage() {
             Find a food allergy certified childcare center near you.
           </h1>
 
-          <p className="mx-auto mt-7 max-w-[820px] text-[17px] leading-[1.35] text-ink sm:text-[19px]">
+          <p className="mx-auto mt-7 max-w-[820px] text-body text-ink">
             We&rsquo;re building a national directory of FAC Certified centers.
             It launches when our first certified centers are ready to be found.
           </p>

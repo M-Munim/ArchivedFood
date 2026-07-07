@@ -20,7 +20,7 @@ export function FinalAssessment() {
         <h2 className="mt-3 font-serif text-[30px] font-bold leading-tight text-ink sm:text-[34px]">
           Certification is earned, not assumed.
         </h2>
-        <p className="mx-auto mt-8 max-w-[920px] text-lg leading-[1.25] text-ink sm:text-[20px]">
+        <p className="mx-auto mt-8 max-w-[920px] text-body text-ink">
           Every staff member takes a final assessment before receiving their
           individual certificate. Centers receive official FAC Certified status
           once all designated staff have passed. This is what separates FAC from

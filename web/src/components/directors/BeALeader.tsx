@@ -20,7 +20,7 @@ const WITH = [
 
 function BulletList({
   items,
-  className = "mt-6 space-y-4 text-lg leading-[1.35] text-ink",
+  className = "mt-6 space-y-4 text-body text-ink",
 }: {
   items: string[];
   className?: string;
@@ -90,7 +90,7 @@ export function BeALeader() {
           <h2 className="mt-4 font-serif text-[32px] font-bold leading-[1.15] text-ink sm:text-[40px]">
             Your center can be the one parents trust before they even walk in
           </h2>
-          <p className="mt-3 text-lg font-semibold text-ink">
+          <p className="mt-3 text-body font-semibold text-ink">
             What the difference looks like.
           </p>
         </div>

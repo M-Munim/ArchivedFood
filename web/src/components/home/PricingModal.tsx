@@ -17,12 +17,13 @@ const EMPTY = {
   phone: "",
   title: "",
   center: "",
+  zip: "",
   employees: "",
   message: "",
 };
 
 /**
- * "Get Pricing Information" lead form for centers, opened from the
+ * "Get your center certified" lead form for centers, opened from the
  * "Get your center certified" CTA. Frontend-only: it validates and shows a
  * success state but does not send anywhere yet.
  * TODO(backend): POST to an email service / CRM endpoint.
@@ -142,7 +143,7 @@ export function PricingModal({ onClose }: { onClose: () => void }) {
               id="pricing-dialog-title"
               className="pr-8 font-serif text-[26px] font-bold leading-[1.15] text-brand-teal-dark sm:text-[30px]"
             >
-              Get Pricing Information
+              Get your center certified
             </h2>
             <p className="mt-2.5 text-[15px] leading-[1.4] text-ink/70">
               Fill out the form below and we&rsquo;ll get back to you with
@@ -220,7 +221,7 @@ export function PricingModal({ onClose }: { onClose: () => void }) {
 
               <div>
                 <label className={label} htmlFor="pr-center">
-                  Daycare Center Name
+                  Childcare Center Name
                 </label>
                 <input
                   id="pr-center"
@@ -229,6 +230,22 @@ export function PricingModal({ onClose }: { onClose: () => void }) {
                   className={field}
                   value={values.center}
                   onChange={set("center")}
+                />
+              </div>
+
+              <div>
+                <label className={label} htmlFor="pr-zip">
+                  Zip Code / Location
+                </label>
+                <input
+                  id="pr-zip"
+                  name="zip"
+                  autoComplete="postal-code"
+                  inputMode="numeric"
+                  className={field}
+                  placeholder="e.g., 90210"
+                  value={values.zip}
+                  onChange={set("zip")}
                 />
               </div>
 

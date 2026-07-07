@@ -8,7 +8,7 @@ export function TheBadge() {
         <h2 className="mx-auto mt-5 max-w-[620px] font-serif text-[30px] font-bold leading-[1.15] text-ink sm:text-[38px]">
           The FAC Certified badge is a promise, not a decoration.
         </h2>
-        <p className="mx-auto mt-8 max-w-[1086px] text-left text-lg leading-[1.35] text-ink sm:text-[20px]">
+        <p className="mx-auto mt-8 max-w-[1086px] text-left text-body text-ink">
           When a center earns FAC Certified status, they receive a badge for
           their website and social profiles and a physical window decal for
           their entrance. For a food allergy parent, that decal on the front

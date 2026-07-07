@@ -52,7 +52,7 @@ const MODULE_PAGES = [
 function ModuleCard({
   module,
   className = "min-h-[376px] rounded-[26px] bg-white px-8 py-10 sm:px-11 sm:py-11",
-  bodyClassName = "mt-4 text-[20px] leading-[1.27] text-ink",
+  bodyClassName = "mt-4 text-body text-ink",
 }: {
   module: Module;
   className?: string;
@@ -83,7 +83,7 @@ export function Curriculum() {
         <h2 className="font-serif text-[27px] font-bold leading-tight text-ink sm:text-[40px]">
           Curriculum overview
         </h2>
-        <p className="mx-auto mt-3 max-w-[314px] text-[15px] leading-[1.2] text-ink sm:max-w-[1110px] sm:text-[20px] sm:leading-[1.3]">
+        <p className="mx-auto mt-3 max-w-[314px] text-body text-ink sm:max-w-[1110px]">
           The FAC standard covers everything a childcare professional needs to
           recognize, prevent, and respond to food allergy emergencies. 90
           minutes, fully online, built around the pace of real childcare work.

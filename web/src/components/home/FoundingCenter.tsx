@@ -118,7 +118,7 @@ export function FoundingCenter() {
           </button>
         </div>
 
-        <div className="mx-auto mt-8 max-w-5xl space-y-3 text-lg text-center leading-[1.25] text-ink ">
+        <div className="mx-auto mt-8 max-w-5xl space-y-3 text-body text-center text-ink ">
           <p>
             We are building the standard for food allergy safety in childcare
             across the country. The centers that join us now are not just getting

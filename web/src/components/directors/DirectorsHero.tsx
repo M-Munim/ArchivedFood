@@ -50,7 +50,7 @@ export function DirectorsHero() {
             One new enrollment pays for this. The peace of mind is priceless.
           </h1>
 
-          <p className="mt-7 max-w-xl text-[21px] leading-[1.35] text-white/90">
+          <p className="mt-7 max-w-xl text-body text-white/90">
             Food Allergy Certified gives your team the training, your center the
             credentials, and food allergy families the reason they&rsquo;ve been
             looking for to choose you and stay.

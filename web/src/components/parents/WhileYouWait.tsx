@@ -24,7 +24,7 @@ export function WhileYouWait() {
             <span className="block">Is your current center</span>
             <span className="block">not certified yet?</span>
           </h2>
-          <p className="mx-auto mt-2 max-w-[310px] text-[16px] leading-[1.3] text-ink sm:mt-9 sm:max-w-[480px] sm:text-[20px]">
+          <p className="mx-auto mt-2 max-w-[310px] text-body text-ink sm:mt-9 sm:max-w-[480px]">
             <span className="block sm:inline">
               A lot of centers get certified
             </span>{" "}

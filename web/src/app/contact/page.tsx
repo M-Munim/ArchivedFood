@@ -21,7 +21,7 @@ export default function ContactPage() {
             <h1 className="mt-4 font-serif text-[40px] font-extrabold leading-[1.05] text-brand-teal-dark sm:text-[56px]">
               We&rsquo;d love to hear from you.
             </h1>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-[1.4] text-ink sm:text-xl px-4">
+            <p className="mx-auto mt-6 max-w-xl text-body text-ink px-4">
               Whether you&rsquo;re a parent looking for a safer center or a
               director ready to get certified, we&rsquo;re here to help.
             </p>

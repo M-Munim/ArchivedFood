@@ -20,23 +20,23 @@ export function FamiliesSearching() {
             The families you want are already searching for you
           </h2>
 
-          <p className="mt-7 text-[21px] leading-[1.32] text-ink">
+          <p className="mt-7 text-body text-ink">
             Food allergy parents don&rsquo;t just pick a childcare center off a
             list. They research. They visit. They look for proof that your center
             is safe for their child.
           </p>
 
-          <p className="mt-3 text-[21px] font-semibold leading-[1.25] text-ink">
+          <p className="mt-3 text-body font-semibold text-ink">
             Be the center they find and the one they never leave.
           </p>
 
           <div className="mx-auto mt-8 flex w-full max-w-[289px] flex-col gap-4">
             <Button
-              href="/book-a-call"
+              href="/for-directors#assessment"
               size="hero"
               className="min-h-[45px] w-full"
             >
-              Schedule a call
+              Take the assessment
             </Button>
             <CertifyButton
               variant="outline"
@@ -64,18 +64,18 @@ export function FamiliesSearching() {
               The families you want are already searching for you
             </h2>
 
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-[1.35] text-ink lg:mx-0">
+            <p className="mx-auto mt-6 max-w-xl text-body text-ink lg:mx-0">
               Food allergy parents don&rsquo;t just pick a childcare center off a
               list. They research. They visit. They look for proof that your center
               is safe for their child.
             </p>
 
-            <p className="mx-auto mt-5 max-w-xl text-lg font-semibold leading-[1.35] text-ink lg:mx-0">
+            <p className="mx-auto mt-5 max-w-xl text-body font-semibold text-ink lg:mx-0">
               Be the center they find and the one they never leave.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-              <Button href="/book-a-call">Schedule a call</Button>
+              <Button href="/for-directors#assessment">Take the assessment</Button>
               <CertifyButton variant="outline" />
             </div>
           </div>

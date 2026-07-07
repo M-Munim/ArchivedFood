@@ -30,7 +30,7 @@ export function ContactForm() {
         <h3 className="mt-5 font-serif text-2xl font-bold text-brand-teal-dark">
           Thanks, {values.first || "friend"}!
         </h3>
-        <p className="mt-3 text-lg text-ink">
+        <p className="mt-3 text-body text-ink">
           Your message is on its way. We&rsquo;ll get back to you within one
           business day.
         </p>

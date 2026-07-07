@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAC ROI Calculator</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 880px;
+    margin: 40px auto;
+    background: #FBF8F3;
+    border-radius: 24px;
+    padding: 40px 24px;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .eyebrow {
+    color: #188079;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .headline {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 12px;
+  }
+  .subhead {
+    color: #4b5563;
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  @media (min-width: 768px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+  }
+  .input-group { margin-bottom: 32px; }
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .input-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+  }
+  .input-value {
+    color: #188079;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  input[type="range"] {
+    width: 100%;
+    accent-color: #188079;
+  }
+  .range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 4px;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    border: 1px solid #f3f4f6;
+    margin-bottom: 16px;
+  }
+  .card-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  .card-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .card-line-label {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  .card-line-value {
+    font-weight: 700;
+    color: #111827;
+  }
+  .card-body-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4b5563;
+  }
+  .payback-card {
+    background: #EAF5F3;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(24,128,121,0.2);
+  }
+  .payback-title {
+    color: #0f5f58;
+  }
+  .payback-text {
+    color: #374151;
+  }
+  .cta-wrap {
+    text-align: center;
+    margin-top: 32px;
+  }
+  .cta-button {
+    background: #F56900;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 999px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .cta-button:hover { background: #dd5d00; }
+  .cta-button:disabled { opacity: 0.7; cursor: default; }
+  .status-message {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  .status-success { color: #188079; }
+  .status-error { color: #9ca3af; }
+  .icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header">
+    <p class="eyebrow">ROI Calculator</p>
+    <h2 class="headline">See what one new family is worth to your center</h2>
+    <p class="subhead">
+      Most directors know their monthly tuition off the top of their head. Enter yours below and see the
+      real number behind one enrollment, one that certification helps you protect and grow.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <!-- Inputs -->
+    <div>
+      <div class="input-group">
+        <div class="input-row">
+          <label class="input-label">Monthly tuition per child</label>
+          <span id="tuitionValue" class="input-value">$1,300</span>
+        </div>
+        <input id="tuitionSlider" type="range" min="600" max="5000" step="25" value="1300" />
+        <div class="range-labels">
+          <span>$600/mo</span>
+          <span>$5,000/mo</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <div class="input-row">
+          <label class="input-label">Current enrollment</label>
+          <span id="enrolledValue" class="input-value">24 children</span>
+        </div>
+        <input id="enrolledSlider" type="range" min="6" max="150" step="1" value="24" />
+        <div class="range-labels">
+          <span>6</span>
+          <span>150</span>
+        </div>
+      </div>
+
+      <div class="input-group" style="margin-bottom: 0;">
+        <div class="input-row">
+          <label class="input-label">Average years a family stays enrolled</label>
+          <span id="yearsValue" class="input-value">2.5 years</span>
+        </div>
+        <input id="yearsSlider" type="range" min="1" max="6" step="0.5" value="2.5" />
+        <div class="range-labels">
+          <span>1 year</span>
+          <span>6 years</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outputs -->
+    <div>
+      <div class="card">
+        <div class="card-title-row">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#F56900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <p class="card-title">What one new family brings you</p>
+        </div>
+        <div class="card-line">
+          <span class="card-line-label">One year enrolled</span>
+          <span id="annualValue" class="card-line-value">$15,600</span>
+        </div>
+        <div class="card-line">
+          <span class="card-line-label">Over <span id="yearsLabel">2.5</span> years, your average stay</span>
+          <span id="lifetimeValue" class="card-line-value">$39,000</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title-row">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#188079" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <p class="card-title">Why this matters</p>
+        </div>
+        <p class="card-body-text">
+          Families choose centers they trust without hesitation. Certification is what lets a parent walk
+          in and know their child is protected, not just included.
+        </p>
+      </div>
+
+      <div class="payback-card">
+        <div class="card-title-row">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#188079" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+          <p class="card-title payback-title">The payback</p>
+        </div>
+        <p class="card-body-text payback-text">
+          Certification pays for itself in just a few weeks of one child's tuition, and founding centers
+          lock in an even lower rate right now. One new enrolled family covers it, and every family after
+          that is money back in your pocket.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-wrap">
+    <button id="ctaButton" class="cta-button">See founder pricing</button>
+    <p id="statusMessage" class="status-message"></p>
+  </div>
+
+</div>
+
+<script>
+  var tuitionSlider = document.getElementById('tuitionSlider');
+  var enrolledSlider = document.getElementById('enrolledSlider');
+  var yearsSlider = document.getElementById('yearsSlider');
+
+  var tuitionValue = document.getElementById('tuitionValue');
+  var enrolledValue = document.getElementById('enrolledValue');
+  var yearsValue = document.getElementById('yearsValue');
+  var yearsLabel = document.getElementById('yearsLabel');
+  var annualValue = document.getElementById('annualValue');
+  var lifetimeValue = document.getElementById('lifetimeValue');
+
+  function fmt(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function recalculate() {
+    var tuition = Number(tuitionSlider.value);
+    var enrolled = Number(enrolledSlider.value);
+    var years = Number(yearsSlider.value);
+
+    var annual = tuition * 12;
+    var lifetime = annual * years;
+
+    tuitionValue.textContent = fmt(tuition);
+    enrolledValue.textContent = enrolled + ' children';
+    yearsValue.textContent = years + ' years';
+    yearsLabel.textContent = years;
+    annualValue.textContent = fmt(annual);
+    lifetimeValue.textContent = fmt(lifetime);
+  }
+
+  [tuitionSlider, enrolledSlider, yearsSlider].forEach(function (slider) {
+    slider.addEventListener('input', recalculate);
+  });
+
+  recalculate();
+
+  var ctaButton = document.getElementById('ctaButton');
+  var statusMessage = document.getElementById('statusMessage');
+
+  ctaButton.addEventListener('click', function () {
+    ctaButton.disabled = true;
+    ctaButton.textContent = 'One moment...';
+    statusMessage.textContent = '';
+    statusMessage.className = 'status-message';
+
+    var payload = {
+      monthlyTuition: Number(tuitionSlider.value),
+      childrenEnrolled: Number(enrolledSlider.value),
+      avgYears: Number(yearsSlider.value),
+      annualValue: Number(tuitionSlider.value) * 12,
+      lifetimeValue: Number(tuitionSlider.value) * 12 * Number(yearsSlider.value),
+      submittedAt: new Date().toISOString()
+    };
+
+    fetch('/.netlify/functions/save-roi-inputs', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Save failed');
+        statusMessage.textContent = 'Thanks, someone from our team will follow up shortly.';
+        statusMessage.className = 'status-message status-success';
+      })
+      .catch(function () {
+        statusMessage.textContent = "Something didn't go through. Give it another try.";
+        statusMessage.className = 'status-message status-error';
+      })
+      .finally(function () {
+        ctaButton.disabled = false;
+        ctaButton.textContent = 'See founder pricing';
+      });
+  });
+</script>
+
+</body>
+</html>

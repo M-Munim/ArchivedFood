@@ -3,7 +3,30 @@ import { describe, expect, it } from "vitest";
 import { RoiCalculator } from "./RoiCalculator";
 
 describe("RoiCalculator", () => {
-  it("updates both displayed values from the sliders", () => {
+  it("recalculates the dollar values from the sliders", () => {
+    render(<RoiCalculator />);
+
+    // Defaults: $1,300/mo, 2.5 years -> $15,600 annual, $39,000 lifetime.
+    expect(screen.getByText("$15,600")).toBeInTheDocument();
+    expect(screen.getByText("$39,000")).toBeInTheDocument();
+
+    // $2,000/mo over 3 years -> $24,000 annual, $72,000 lifetime.
+    fireEvent.change(
+      screen.getByRole("slider", { name: "Monthly tuition per child" }),
+      { target: { value: "2000" } },
+    );
+    fireEvent.change(
+      screen.getByRole("slider", {
+        name: "Average years a family stays enrolled",
+      }),
+      { target: { value: "3" } },
+    );
+
+    expect(screen.getByText("$24,000")).toBeInTheDocument();
+    expect(screen.getByText("$72,000")).toBeInTheDocument();
+  });
+
+  it("updates the enrollment and years labels from the sliders", () => {
     render(<RoiCalculator />);
 
     fireEvent.change(
@@ -21,24 +44,17 @@ describe("RoiCalculator", () => {
     expect(screen.getByText("4.5 years")).toBeInTheDocument();
   });
 
-  it("matches the Figma calculator content", () => {
+  it("matches the client calculator content and CTA", () => {
     render(<RoiCalculator />);
 
     expect(
       screen.getByRole("heading", {
-        name: "One enrollment changes the math completely",
+        name: "See what one new family is worth to your center",
       }),
     ).toBeInTheDocument();
-    expect(
-      screen.queryByText("Lifetime tuition from one new family"),
-    ).not.toBeInTheDocument();
 
-    // The CTA opens the waitlist popup instead of navigating to /certification.
-    const cta = screen.getByRole("button", {
-      name: "Get your center certified",
-    });
-    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
-    fireEvent.click(cta);
-    expect(screen.getByRole("dialog")).toBeInTheDocument();
+    // The CTA is a plain link to the contact page (no form submit).
+    const cta = screen.getByRole("link", { name: "See founder pricing" });
+    expect(cta).toHaveAttribute("href", "/contact");
   });
 });

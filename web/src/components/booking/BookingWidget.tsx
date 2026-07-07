@@ -81,7 +81,7 @@ export function BookingWidget() {
         <h3 className="mt-6 font-serif text-[26px] font-bold text-brand-teal-dark">
           You&rsquo;re booked!
         </h3>
-        <p className="mt-3 text-lg text-ink">
+        <p className="mt-3 text-body text-ink">
           Your 15-minute call is set for
           <br />
           <span className="font-semibold">{longDate} at {slot}</span>.

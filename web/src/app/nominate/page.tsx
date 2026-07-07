@@ -27,7 +27,7 @@ export default function NominatePage() {
           </Link>
         </div>
 
-        <p className="mt-3 max-w-2xl text-lg font-semibold text-ink">
+        <p className="mt-3 max-w-2xl text-body font-semibold text-ink">
           Help make childcare safer by nominating a center for our free
           certification pilot program.
         </p>

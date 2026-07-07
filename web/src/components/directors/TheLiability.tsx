@@ -59,7 +59,7 @@ export function TheLiability() {
               A trained staff is a protected staff
             </h2>
 
-            <div className="mt-6 max-w-[850px] space-y-2.5 text-xl leading-[1.25] text-ink">
+            <div className="mt-6 max-w-[850px] space-y-2.5 text-body text-ink">
               <p>
                 Most childcare centers are not underprepared because they
                 don&rsquo;t care. They&rsquo;re underprepared because no one has

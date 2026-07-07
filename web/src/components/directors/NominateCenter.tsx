@@ -162,7 +162,7 @@ export function NominateCenter() {
               <h2 className="mt-3 font-serif text-[32px] font-bold leading-[1.15] text-ink sm:text-[34px] xl:whitespace-nowrap">
                 Know a center that should be certified?
               </h2>
-              <p className="mt-5 text-lg leading-[1.35] text-ink">
+              <p className="mt-5 text-body text-ink">
                 Nominate them for our pilot program and they could receive free
                 certification for their entire staff.
               </p>

@@ -1,0 +1,175 @@
+import React, { useState, useMemo } from "react";
+import { Heart, TrendingUp, Shield } from "lucide-react";
+
+export default function ROICalculator() {
+  const [monthlyTuition, setMonthlyTuition] = useState(1300);
+  const [childrenEnrolled, setChildrenEnrolled] = useState(24);
+  const [avgYears, setAvgYears] = useState(2.5);
+  const [submitStatus, setSubmitStatus] = useState("idle");
+
+  const numbers = useMemo(() => {
+    const annualValue = Math.round(monthlyTuition * 12);
+    const lifetimeValue = Math.round(annualValue * avgYears);
+    return { annualValue, lifetimeValue };
+  }, [monthlyTuition, avgYears]);
+
+  const fmt = (n) =>
+    n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+
+  const handleSeePricing = async () => {
+    setSubmitStatus("sending");
+    try {
+      const response = await fetch("/.netlify/functions/save-roi-inputs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          monthlyTuition,
+          childrenEnrolled,
+          avgYears,
+          annualValue: numbers.annualValue,
+          lifetimeValue: numbers.lifetimeValue,
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+      if (!response.ok) throw new Error("Save failed");
+      setSubmitStatus("sent");
+    } catch (err) {
+      setSubmitStatus("error");
+    }
+  };
+
+  return (
+    <div className="w-full max-w-4xl mx-auto bg-[#FBF8F3] rounded-3xl p-6 md:p-10 font-sans">
+      <div className="text-center mb-8">
+        <p className="text-[#188079] font-semibold tracking-wide text-sm mb-2">ROI Calculator</p>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+          See what one new family is worth to your center
+        </h2>
+        <p className="text-gray-600 max-w-xl mx-auto text-sm md:text-base">
+          Most directors know their monthly tuition off the top of their head. Enter yours below and see the
+          real number behind one enrollment, one that certification helps you protect and grow.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="space-y-8">
+          <div>
+            <div className="flex justify-between items-baseline mb-2">
+              <label className="text-sm font-medium text-gray-700">Monthly tuition per child</label>
+              <span className="text-[#188079] font-bold text-lg">{fmt(monthlyTuition)}</span>
+            </div>
+            <input
+              type="range"
+              min={600}
+              max={5000}
+              step={25}
+              value={monthlyTuition}
+              onChange={(e) => setMonthlyTuition(Number(e.target.value))}
+              className="w-full accent-[#188079]"
+            />
+            <div className="flex justify-between text-xs text-gray-400 mt-1">
+              <span>$600/mo</span>
+              <span>$5,000/mo</span>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between items-baseline mb-2">
+              <label className="text-sm font-medium text-gray-700">Current enrollment</label>
+              <span className="text-[#188079] font-bold text-lg">{childrenEnrolled} children</span>
+            </div>
+            <input
+              type="range"
+              min={6}
+              max={150}
+              step={1}
+              value={childrenEnrolled}
+              onChange={(e) => setChildrenEnrolled(Number(e.target.value))}
+              className="w-full accent-[#188079]"
+            />
+            <div className="flex justify-between text-xs text-gray-400 mt-1">
+              <span>6</span>
+              <span>150</span>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between items-baseline mb-2">
+              <label className="text-sm font-medium text-gray-700">Average years a family stays enrolled</label>
+              <span className="text-[#188079] font-bold text-lg">{avgYears} years</span>
+            </div>
+            <input
+              type="range"
+              min={1}
+              max={6}
+              step={0.5}
+              value={avgYears}
+              onChange={(e) => setAvgYears(Number(e.target.value))}
+              className="w-full accent-[#188079]"
+            />
+            <div className="flex justify-between text-xs text-gray-400 mt-1">
+              <span>1 year</span>
+              <span>6 years</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-4">
+          <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+            <div className="flex items-center gap-2 mb-3">
+              <Heart size={18} className="text-[#F56900]" />
+              <p className="text-sm font-semibold text-gray-800">What one new family brings you</p>
+            </div>
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-sm text-gray-500">One year enrolled</span>
+              <span className="font-bold text-gray-900">{fmt(numbers.annualValue)}</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-500">Over {avgYears} years, your average stay</span>
+              <span className="font-bold text-gray-900">{fmt(numbers.lifetimeValue)}</span>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+            <div className="flex items-center gap-2 mb-3">
+              <Shield size={18} className="text-[#188079]" />
+              <p className="text-sm font-semibold text-gray-800">Why this matters</p>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Families choose centers they trust without hesitation. Certification is what lets a parent walk
+              in and know their child is protected, not just included.
+            </p>
+          </div>
+
+          <div className="bg-[#EAF5F3] rounded-2xl p-5 border border-[#188079]/20">
+            <div className="flex items-center gap-2 mb-2">
+              <TrendingUp size={18} className="text-[#188079]" />
+              <p className="text-sm font-semibold text-[#0f5f58]">The payback</p>
+            </div>
+            <p className="text-sm leading-relaxed text-gray-700">
+              Certification pays for itself in just a few weeks of one child's tuition, and founding centers
+              lock in an even lower rate right now. One new enrolled family covers it, and every family after
+              that is money back in your pocket.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center mt-8">
+        <button
+          onClick={handleSeePricing}
+          disabled={submitStatus === "sending"}
+          className="bg-[#F56900] hover:bg-[#dd5d00] text-white font-semibold px-8 py-3 rounded-full transition-colors disabled:opacity-70"
+        >
+          {submitStatus === "sending" ? "One moment..." : "See founder pricing"}
+        </button>
+        {submitStatus === "sent" && (
+          <p className="text-sm text-[#188079] mt-3">Thanks, someone from our team will follow up shortly.</p>
+        )}
+        {submitStatus === "error" && (
+          <p className="text-sm text-gray-400 mt-3">Something didn't go through. Give it another try.</p>
+        )}
+      </div>
+    </div>
+  );
+}

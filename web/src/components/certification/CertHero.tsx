@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/Button";
+import { CertifyButton } from "@/components/home/CertifyButton";
 import wave from "@/../public/images/Vector.png";
 
 export function CertHero() {
@@ -22,7 +22,7 @@ export function CertHero() {
           <span className="block">means something.</span>
         </h1>
 
-        <p className="mx-auto mt-7 max-w-[850px] text-lg leading-[1.35] text-ink sm:text-xl">
+        <p className="mx-auto mt-7 max-w-[850px] text-body text-ink">
           FAC was built specifically for childcare professionals. Not a generic
           food safety course. Not a restaurant compliance checklist. This is the
           standard of care for food allergy safety in childcare settings, built
@@ -30,7 +30,7 @@ export function CertHero() {
         </p>
 
         <div className="mt-8 flex justify-center">
-          <Button href="/book-a-call">Get your center certified</Button>
+          <CertifyButton />
         </div>
       </div>
     </section>

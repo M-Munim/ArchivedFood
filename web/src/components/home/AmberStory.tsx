@@ -35,7 +35,7 @@ export function AmberStory() {
           </div>
 
           <div className="col-span-2 px-6 sm:px-0 lg:col-span-1 lg:col-start-2">
-            <div className="space-y-4 text-lg leading-[1.35] text-ink">
+            <div className="space-y-4 text-body text-ink">
               <p>
                 When my son Xion was four months old, I put a little mango
                 milkshake on his lips. I knew it had milk in it. I just never

@@ -15,14 +15,14 @@ export function JoinCommunity() {
             <h2 className="text-[28px] font-extrabold uppercase leading-[1.05] tracking-wide text-ink sm:text-[24px] sm:leading-none">
               Join our community
             </h2>
-            <p className="mt-5 text-lg leading-[1.18] text-ink sm:mt-7  sm:leading-none">
+            <p className="mt-5 text-body text-ink sm:mt-7">
               Stay in the know about future food allergy certifications, events,
               and news.
             </p>
           </div>
 
           {submitted ? (
-            <p className="mt-8 text-lg font-semibold text-ink">
+            <p className="mt-8 text-body font-semibold text-ink">
               Thanks for joining! We&rsquo;ll be in touch soon.
             </p>
           ) : (

@@ -21,7 +21,7 @@ export default function BookACallPage() {
               certification makes sense for you.
             </p>
 
-            <p className="mt-6 text-lg font-semibold text-ink sm:text-xl">
+            <p className="mt-6 text-body font-semibold text-ink">
               Book a time that works and I&rsquo;ll see you there.
             </p>
           </div>

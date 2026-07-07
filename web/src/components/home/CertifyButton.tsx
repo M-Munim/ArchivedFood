@@ -8,7 +8,7 @@ type Variant = "primary" | "outline" | "outlineLight" | "mint";
 type Size = "md" | "sm" | "hero" | "header";
 
 /**
- * The "Get your center certified" CTA. Opens the Get Pricing Information
+ * The "Get your center certified" CTA. Opens the "Get your center certified"
  * popup instead of navigating away. Accepts the usual Button styling props so
  * it can match each call site.
  */

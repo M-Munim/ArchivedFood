@@ -29,8 +29,8 @@ export function Hero() {
 
       {/* Copy */}
       <div className="relative mx-auto -mt-4 max-w-[1280px] px-6 sm:mt-0 lg:px-10 ">
-        <div className="mx-auto w-full max-w-[306px] pb-7 text-center sm:max-w-none sm:py-8 lg:mx-0 lg:w-[58%] lg:py-20 lg:text-left">
-          <h1 className="font-serif text-[30px] font-extrabold leading-[1.05] text-brand-orange sm:text-[52px] lg:text-[55px]">
+        <div className="mx-auto w-full max-w-[306px] pb-7 text-center sm:max-w-none sm:py-8 lg:mx-0 lg:max-w-[clamp(380px,40vw_-_30px,600px)] lg:py-20 lg:text-left">
+          <h1 className="font-serif text-[30px] font-extrabold leading-[1.05] text-brand-orange sm:text-[52px] lg:text-[clamp(2rem,4.2vw_-_7px,55px)]">
             The standard of care{" "}
             <br className="hidden lg:block" />
             for children with{" "}
@@ -38,12 +38,12 @@ export function Hero() {
             food allergies.
           </h1>
 
-          <p className="mx-auto mt-7 max-w-2xl text-[15px] leading-[1.3] text-ink sm:mt-6 sm:text-lg sm:leading-[1.35] lg:mx-0 lg:mt-7">
+          <p className="mx-auto mt-7 max-w-2xl text-body text-ink sm:mt-6 lg:mx-0 lg:mt-7">
             Food Allergy Certified helps childcare centers become the place food
             allergy families trust, choose, and never leave.
           </p>
 
-          <p className="mx-auto mt-2.5 max-w-xl text-[16px] font-semibold leading-[1.25] text-ink sm:mt-5 sm:text-lg sm:leading-[1.35] lg:mx-0">
+          <p className="mx-auto mt-2.5 max-w-xl text-body font-semibold text-ink sm:mt-5 lg:mx-0">
             The only food allergy certification designed for childcare centers.
           </p>
 

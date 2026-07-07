@@ -66,7 +66,7 @@ export function LegalDoc({
           </p>
         )}
 
-        <p className="mt-8 text-lg leading-[1.5] text-ink">{intro}</p>
+        <p className="mt-8 text-body text-ink">{intro}</p>
 
         <div className="mt-10 space-y-10">
           {sections.map((s) => (
@@ -75,14 +75,14 @@ export function LegalDoc({
                 {s.heading}
               </h2>
               {s.body && (
-                <div className="mt-3 space-y-4 text-lg leading-[1.5] text-ink/90">
+                <div className="mt-3 space-y-4 text-body text-ink/90">
                   {s.body.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
                 </div>
               )}
               {s.list && (
-                <ul className="mt-4 space-y-2 text-lg leading-[1.5] text-ink/90">
+                <ul className="mt-4 space-y-2 text-body text-ink/90">
                   {s.list.map((li, i) => (
                     <li key={i} className="flex gap-3">
                       <span
@@ -95,7 +95,7 @@ export function LegalDoc({
                 </ul>
               )}
               {s.blocks && (
-                <div className="mt-3 space-y-4 text-lg leading-[1.5] text-ink/90">
+                <div className="mt-3 space-y-4 text-body text-ink/90">
                   {s.blocks.map((block, i) => {
                     if (block.type === "paragraph") {
                       return <p key={i}>{block.text}</p>;

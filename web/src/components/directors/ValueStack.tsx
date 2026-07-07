@@ -76,7 +76,7 @@ export function ValueStack() {
               {LAYERS.map((layer) => (
                 <div key={layer.title}>
                   <h3 className="text-lg font-semibold text-ink">{layer.title}</h3>
-                  <p className="mt-1 text-lg leading-[1.35] text-ink">{layer.body}</p>
+                  <p className="mt-1 text-body text-ink">{layer.body}</p>
                 </div>
               ))}
             </div>

@@ -2,18 +2,18 @@
 
 @theme {
   /* Brand palette (sampled from the design) */
-  --color-brand-orange: #f46800;
+  --color-brand-orange: #f56900;
   --color-brand-yellow: #ffbc00;
-  --color-brand-teal: #188079;
-  --color-brand-mint: #c4efed;
+  --color-brand-teal: #18817a;
+  --color-brand-mint: #c5efee;
   --color-brand-peach: #fff1e1;
   --color-brand-blue: #1583e0;
-  --color-brand-brightblue: #0089ff;
-  --color-brand-sky: #dbefff;
-  --color-brand-teal-dark: #084d56;
-  --color-brand-seafoam: #5bbaba;
-  --color-brand-cream: #f9e6cf;
-  --color-brand-blush: #ffe8db;
+  --color-brand-brightblue: #008aff;
+  --color-brand-sky: #dbf0ff;
+  --color-brand-teal-dark: #094d56;
+  --color-brand-seafoam: #5cbaba;
+  --color-brand-cream: #f9e7d0;
+  --color-brand-blush: #ffe8dc;
   --color-brand-pink: #e24e9d;
   --color-brand-red: #ea3a2d;
 
@@ -76,10 +76,33 @@ body {
   .eyebrow {
     font-family: var(--font-sans);
     font-weight: 600;
+    /* Figma Caption/Eyebrow: 14px/16px mobile, 16px/110% desktop */
     font-size: 0.875rem;
-    line-height: 1.1;
+    line-height: 1.14;
     letter-spacing: 0.14em;
     text-transform: uppercase;
+  }
+
+  /*
+   * Body copy per the Figma type system.
+   * Mobile: Poppins 16px / 20px (line-height 1.25)
+   * Desktop (>=640px): Poppins 18px / 125% (line-height 1.25)
+   * Compose with Tailwind utilities for weight (font-semibold) and color.
+   */
+  .text-body {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  @media (min-width: 40rem) {
+    .eyebrow {
+      font-size: 1rem;
+      line-height: 1.1;
+    }
+
+    .text-body {
+      font-size: 1.125rem;
+    }
   }
 
   .roi-range {

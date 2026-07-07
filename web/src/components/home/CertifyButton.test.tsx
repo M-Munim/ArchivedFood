@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { CertifyButton } from "./CertifyButton";
 
 describe("CertifyButton", () => {
-  it("opens the Get Pricing Information form with the expected fields", () => {
+  it("opens the certification lead form with the expected fields", () => {
     render(<CertifyButton />);
 
     // No dialog until the CTA is clicked.
@@ -15,7 +15,7 @@ describe("CertifyButton", () => {
     const dialog = screen.getByRole("dialog");
     expect(dialog).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Get Pricing Information" }),
+      screen.getByRole("heading", { name: "Get your center certified" }),
     ).toBeInTheDocument();
 
     // Every field from the design is present.
@@ -23,7 +23,8 @@ describe("CertifyButton", () => {
     expect(screen.getByLabelText("Email")).toBeInTheDocument();
     expect(screen.getByLabelText("Phone")).toBeInTheDocument();
     expect(screen.getByLabelText("Your Title")).toBeInTheDocument();
-    expect(screen.getByLabelText("Daycare Center Name")).toBeInTheDocument();
+    expect(screen.getByLabelText("Childcare Center Name")).toBeInTheDocument();
+    expect(screen.getByLabelText("Zip Code / Location")).toBeInTheDocument();
     expect(
       screen.getByLabelText("Number of Employees Requiring Certification"),
     ).toBeInTheDocument();
@@ -49,7 +50,7 @@ describe("CertifyButton", () => {
 
     expect(screen.getByText(/Thanks, Jane/)).toBeInTheDocument();
     expect(
-      screen.queryByRole("heading", { name: "Get Pricing Information" }),
+      screen.queryByRole("heading", { name: "Get your center certified" }),
     ).not.toBeInTheDocument();
   });
 });
