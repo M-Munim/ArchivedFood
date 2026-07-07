@@ -23,7 +23,7 @@ export function ValueStack() {
     <section className="relative bg-brand-cream py-16 sm:py-20">
       <Container className="px-6 sm:hidden">
         <div className="mx-auto max-w-[348px]">
-          <h2 className="text-center font-serif text-[18px] font-bold leading-[1.2] text-ink">
+          <h2 className="text-center font-serif text-[25px] font-bold leading-[1.2] text-ink">
             Three-Layer Value Stack
           </h2>
 

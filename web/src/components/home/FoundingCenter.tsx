@@ -38,9 +38,9 @@ export function FoundingCenter() {
 
   return (
     <section className="bg-brand-peach py-10 sm:py-16">
-      {/* Uses the navbar container width (max-w-[1320px] + lg:px-10) so the
-          widened carousel and its ‹ › arrows line up with the navbar: the left
-          arrow sits under the logo, the right arrow under "Book a call". */}
+      {/* Centered container. The carousel, body copy and step block on the
+          section above all share the same ~800px centered column so their left
+          and right edges line up vertically, matching the Figma. */}
       <div className="mx-auto w-full max-w-[1320px] px-6 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-xl text-center">
           <Eyebrow>Founding Center Offer</Eyebrow>
@@ -50,9 +50,9 @@ export function FoundingCenter() {
           </h2>
         </div>
 
-        {/* Carousel — widened to fill the navbar width. The arrows are flex
-            items that hug the card and sit out near the logo / Book-a-call
-            edges; the card itself scales up to ~1040px. */}
+        {/* Carousel — the card matches the ~800px content column so it lines up
+            with the How It Works block above; the ‹ › arrows are flex items
+            that hug the card and sit just outside its edges. */}
         <div className="mx-auto mt-14 flex w-full items-center justify-center gap-3 sm:gap-6">
           <button
             type="button"
@@ -63,7 +63,7 @@ export function FoundingCenter() {
             <Chevron dir="left" />
           </button>
 
-          <figure className="w-full max-w-[1040px] overflow-hidden rounded-lg shadow-sm">
+          <figure className="w-full max-w-[800px] overflow-hidden rounded-lg shadow-sm">
             <div className="relative">
               <span className="absolute right-0 top-0 z-10 -translate-y-full rounded-t-lg bg-brand-orange px-9 py-2 text-sm font-semibold leading-none text-white shadow-sm">
                 Pilot Program Center
@@ -73,7 +73,7 @@ export function FoundingCenter() {
                   src={foundingDaycare}
                   alt={`${center.name} - a colorful childcare center`}
                   fill
-                  sizes="(max-width: 640px) 100vw, 1040px"
+                  sizes="(max-width: 640px) 100vw, 800px"
                   className="object-cover"
                 />
               </div>
@@ -118,7 +118,7 @@ export function FoundingCenter() {
           </button>
         </div>
 
-        <div className="mx-auto mt-8 max-w-5xl space-y-3 text-body text-center text-ink ">
+        <div className="mx-auto mt-8 max-w-[800px] space-y-3 text-body text-left text-ink sm:text-center ">
           <p>
             We are building the standard for food allergy safety in childcare
             across the country. The centers that join us now are not just getting
@@ -140,7 +140,11 @@ export function FoundingCenter() {
           >
             Apply for a founding center spot
           </Button>
-          <p className="text-[28px] font-bold uppercase tracking-normal text-ink">
+          {/* One line on mobile: the fluid clamp shrinks the text just enough
+              to keep "10 SPOTS. 7 SPOKEN FOR. 3 REMAIN." on a single line across
+              phone widths (whitespace-nowrap), centered; at sm+ it locks to
+              28px, still centered with the button above. */}
+          <p className="w-full whitespace-nowrap text-center text-[clamp(14px,4.4vw,28px)] font-bold uppercase tracking-normal text-ink sm:w-auto sm:text-[28px]">
             10 spots. 7 spoken for.{" "}
             <span className="text-brand-blue">3 remain.</span>
           </p>

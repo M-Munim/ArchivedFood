@@ -112,7 +112,11 @@ export function CenterReceives() {
 
             <figcaption className="mx-auto mt-10 max-w-[460px] sm:mt-12">
               <p className="text-body text-ink">
+                {/* On mobile the bold title sits on its own line with the caption
+                    beneath it (matching the Figma); at sm+ the break is hidden so
+                    they flow together inline. */}
                 <span className="font-semibold">{item.title}</span>{" "}
+                <br className="sm:hidden" />
                 {item.caption}
               </p>
             </figcaption>

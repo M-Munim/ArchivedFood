@@ -19,7 +19,13 @@ const STEPS = [
     width: 168,
     height: 160,
     title: "Train Your Staff",
-    body: "Complete short, scenario-based modules designed for entire daycare staff. 90 minutes, fully online, built for busy childcare professionals.",
+    body: (
+      <>
+        Short, scenario-based modules your whole team completes in about 90{" "}
+        <br className="hidden sm:block" />
+        minutes. Fully online.
+      </>
+    ),
   },
   {
     n: 3,
@@ -27,7 +33,17 @@ const STEPS = [
     width: 168,
     height: 160,
     title: "Get Certified",
-    body: "Your center receives official FAC Certified status, including your badge, your window decal, and your Parent Trust Kit. Display your certification and become the center allergy families search for, choose, and recommend to everyone they know.",
+    body: (
+      <>
+        Your center receives official FAC Certified status, your badge, your
+        window{" "}
+        <br className="hidden sm:block" />
+        decal, and your Parent Trust Kit. You’re now the center allergy families
+        are{" "}
+        <br className="hidden sm:block" />
+        looking for.
+      </>
+    ),
   },
 ];
 
@@ -67,7 +83,7 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <ol className="mx-auto mt-12 max-w-xl space-y-8">
+        <ol className="mx-auto mt-12 max-w-[800px] space-y-8">
           {STEPS.map((step) => (
             <li key={step.n} className="flex items-start gap-6">
               <StepBadge
@@ -86,7 +102,9 @@ export function HowItWorks() {
           ))}
         </ol>
 
-        <div className="mx-auto mt-12 flex max-w-xl flex-col gap-4 sm:max-w-none sm:flex-row sm:items-center sm:justify-center">
+        {/* Buttons align with the step text column (badge width 80px + gap 24px
+            = 104px indent on desktop), left-aligned, matching the Figma. */}
+        <div className="mx-auto mt-12 flex max-w-[800px] flex-col gap-4 sm:flex-row sm:items-center sm:justify-start sm:pl-[104px]">
           <Button href="/certification">Get pricing and info</Button>
           <Button href="/ambers-story" variant="outline">
             Meet our team of experts

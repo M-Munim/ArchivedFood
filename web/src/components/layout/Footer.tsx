@@ -16,8 +16,8 @@ export function Footer() {
 
   return (
     <footer className="mt-auto bg-black text-white">
-      <div className="mx-auto max-w-[1100px] px-6 py-12 sm:px-0 lg:py-[56px]">
-          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[150px_200px_150px_170px_1fr] lg:gap-[50px]">
+      <div className="mx-auto max-w-[1320px] px-5 py-12 sm:px-6 lg:px-10 lg:py-[56px]">
+          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[150px_200px_1fr_1fr_1fr] lg:gap-[50px]">
             {/* Logo + brand: side by side on mobile, two columns on desktop */}
             <div className="flex items-start gap-5 lg:contents">
               <Image

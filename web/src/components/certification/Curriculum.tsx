@@ -78,12 +78,12 @@ export function Curriculum() {
   const lastMobilePage = MODULES.length - 1;
 
   return (
-    <section id="process" className="scroll-mt-20 bg-brand-sky pb-14 pt-6">
+    <section id="process" className="scroll-mt-20 bg-brand-sky pb-8 pt-6 sm:pb-14">
       <div className="mx-auto max-w-[1160px] px-6 text-center">
         <h2 className="font-serif text-[27px] font-bold leading-tight text-ink sm:text-[40px]">
           Curriculum overview
         </h2>
-        <p className="mx-auto mt-3 max-w-[314px] text-body text-ink sm:max-w-[1110px]">
+        <p className="mx-auto mt-3 max-w-[850px] text-body text-ink sm:max-w-[1110px]">
           The FAC standard covers everything a childcare professional needs to
           recognize, prevent, and respond to food allergy emergencies. 90
           minutes, fully online, built around the pace of real childcare work.

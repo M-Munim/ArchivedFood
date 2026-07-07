@@ -14,7 +14,7 @@ export function CertHero() {
         className="pointer-events-none absolute -top-8 right-0 h-[24vw] w-[80vw] sm:-top-12 sm:h-[16vw] sm:w-[55vw] lg:-top-14 lg:h-[10vw] lg:w-[43vw]"
       />
 
-      <div className="relative z-10 mx-auto max-w-[940px] px-6 pb-16 pt-20 text-center">
+      <div className="relative z-10 mx-auto max-w-[940px] px-6 pb-6 pt-20 text-center sm:pb-16">
         <h1 className="mx-auto max-w-[700px] font-serif text-[40px] font-extrabold leading-[1.02] text-brand-blue sm:text-[56px]">
           <span className="block">6 modules.</span>
           <span className="block">1 final exam.</span>

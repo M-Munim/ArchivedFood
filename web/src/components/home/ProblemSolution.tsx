@@ -13,12 +13,23 @@ export function ProblemSolution() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-0">
           {/* The Problem */}
           <div className="lg:pr-14">
-            <div className="flex items-start justify-between gap-4">
+            {/* Text column (left) sits beside the character (right), matching
+                the Figma. On mobile the `sm:hidden` breaks lock the headline to
+                the Figma's exact 5-line wrap; at sm+ the breaks disappear and it
+                wraps naturally within max-w-md. */}
+            <div className="flex items-center justify-between gap-3 sm:items-start sm:gap-4">
               <div>
                 <Eyebrow>The Problem</Eyebrow>
-                <h2 className="mt-4 max-w-md font-serif text-[30px] font-bold leading-[1.15] text-ink sm:text-[34px]">
-                  Parents of children with food allergies are not just picking a
-                  childcare center
+                <h2 className="mt-4 max-w-md font-serif text-[26px] font-bold leading-[1.15] text-ink sm:text-[34px]">
+                  Parents of{" "}
+                  <br className="sm:hidden" />
+                  children with{" "}
+                  <br className="sm:hidden" />
+                  food allergies are{" "}
+                  <br className="sm:hidden" />
+                  not just picking a{" "}
+                  <br className="sm:hidden" />
+                  childcare center.
                 </h2>
               </div>
               <Image
@@ -30,8 +41,12 @@ export function ProblemSolution() {
               />
             </div>
 
+            {/* Sub-line locked to the Figma's 2-line mobile wrap; the break is
+                hidden at sm+ so it stays on one line on larger screens. */}
             <p className="mt-6 text-body font-semibold text-ink">
-              They&rsquo;re deciding who they trust with their child&rsquo;s life.
+              They&rsquo;re deciding who they{" "}
+              <br className="sm:hidden" />
+              trust with their child&rsquo;s life.
             </p>
 
             <div className="mt-5 space-y-4 text-body text-ink">
@@ -50,11 +65,13 @@ export function ProblemSolution() {
           </div>
 
           {/* The Solution */}
-          <div className="lg:border-l lg:border-black/15 lg:pl-14">
+          {/* On mobile the columns stack, so the desktop vertical divider
+              (lg:border-l) becomes a horizontal rule between the two blocks. */}
+          <div className="border-t-2 border-black/35 pt-12 lg:border-t-0 lg:pt-0 lg:border-l lg:border-black/15 lg:pl-14">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <Eyebrow>The Solution</Eyebrow>
-                <h2 className="mt-4 max-w-md font-serif text-[30px] font-bold leading-[1.15] text-ink sm:text-[34px]">
+                <h2 className="mt-4 max-w-md font-serif text-[26px] font-bold leading-[1.15] text-ink sm:text-[34px]">
                   We built the standard. Now your center can meet it
                 </h2>
               </div>

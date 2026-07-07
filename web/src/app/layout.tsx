@@ -34,9 +34,11 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL("https://foodallergycertified.com"),
   title: {
-    default:
-      "Food Allergy Certified — The standard of care for children with food allergies",
-    template: "%s | Food Allergy Certified",
+    // Every page shows exactly "Food Allergy Certified": the default covers
+    // pages with no title, and the template (no %s) collapses any child page's
+    // own title down to this same string.
+    default: "Food Allergy Certified",
+    template: "Food Allergy Certified",
   },
   description,
   applicationName: "Food Allergy Certified",

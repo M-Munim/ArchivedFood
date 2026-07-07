@@ -117,26 +117,40 @@ export function NominateCenter() {
       <section className="relative overflow-hidden bg-brand-brightblue py-14 sm:py-16">
         <Container className="px-6 sm:hidden">
           <div className="mx-auto max-w-[308px]">
-            <div className="grid grid-cols-[1fr_106px] items-start gap-3">
-              <div>
-                <Eyebrow>Nominate a Childcare Center</Eyebrow>
-                <h2 className="mt-3 font-serif text-[27px] font-bold leading-[1.05] text-ink">
-                  Know a center that should be certified?
-                </h2>
-              </div>
+            {/* Eyebrow spans the full width on one line (matching the Figma);
+                fluid-sized so it never wraps on narrow phones. */}
+            <Eyebrow className="whitespace-nowrap text-[clamp(11px,3.6vw,14px)]">
+              Nominate a Childcare Center
+            </Eyebrow>
+            <div className="mt-3 grid grid-cols-[1fr_96px] items-start gap-2">
+              {/* Heading locked to the Figma's 3-line wrap, beside the megaphone. */}
+              <h2 className="font-serif text-[27px] font-bold leading-[1.05] text-ink">
+                Know a center
+                <br />
+                that should be
+                <br />
+                certified?
+              </h2>
 
+              {/* Larger than its 96px grid cell and allowed to bleed right into
+                  the section, so it reads bigger without shrinking the heading
+                  column (max-w-none beats Tailwind's default img max-width). */}
               <Image
                 src={trumpet}
                 alt=""
                 data-testid="trumpet-artwork"
-                sizes="106px"
-                className="mt-1 h-auto w-[106px]"
+                sizes="114px"
+                className="mt-1 h-auto w-[114px] max-w-none"
               />
             </div>
 
-            <p className="mt-6 max-w-[290px] text-[15px] leading-[1.18] text-ink">
-              Nominate them for our pilot program and they could receive free
-              certification for their entire staff.
+            {/* Body wrap locked to the Figma's 3 lines. */}
+            <p className="mt-6 text-[15px] leading-[1.18] text-ink">
+              Nominate them for our pilot
+              <br />
+              program and they could receive
+              <br />
+              free certification for their entire staff.
             </p>
 
             <div ref={triggerRef} className="mt-8 flex justify-center">

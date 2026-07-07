@@ -2,18 +2,18 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import certBadge from "@/../public/images/Group 3.png";
 import introBackground from "@/../public/images/Intro Background Shape.png";
-import allergist from "@/../public/images/allergist.jpeg";
+import allergist from "@/../public/images/nelly-padfield.jpeg";
 
 export function FinalAssessment() {
   return (
-    <section className="bg-brand-sky pt-8">
+    <section className="bg-brand-sky pt-2 sm:pt-8">
       <div className="mx-auto max-w-[980px] px-6 text-center">
         <Image
           src={certBadge}
           alt="Food Allergy Certified — 2026 Certified Center badge"
-          width={180}
-          height={Math.round((certBadge.height / certBadge.width) * 180)}
-          className="mx-auto"
+          width={300}
+          height={Math.round((certBadge.height / certBadge.width) * 300)}
+          className="mx-auto h-auto w-[230px] sm:w-[180px]"
         />
 
         <Eyebrow className="mt-8">The Final Assessment</Eyebrow>
@@ -39,15 +39,15 @@ export function FinalAssessment() {
               allergist to ensure clinical accuracy across all six modules.
             </p>
           </div>
-          <div className="flex min-h-[85px] items-center bg-ink text-left text-white">
+          <div className="flex min-h-[80px] items-center bg-ink text-left text-white">
             <Image
               src={allergist}
-              alt="Portrait of the reviewing pediatric allergist"
-              width={85}
-              height={85}
-              className="h-[85px] w-[85px] shrink-0 object-cover"
+              alt="Portrait of Nelly Padfield, the reviewing pediatric allergist"
+              width={160}
+              height={160}
+              className="h-[80px] w-[80px] shrink-0 object-cover"
             />
-            <div className="px-5 py-3">
+            <div className="px-5 py-2">
               <p className="text-[16px] font-semibold leading-tight">
                 Board-certified pediatric allergist
               </p>

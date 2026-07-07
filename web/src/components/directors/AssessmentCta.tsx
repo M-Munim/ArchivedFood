@@ -318,7 +318,12 @@ export function AssessmentCta() {
       >
         <Container className="px-6 sm:px-0">
           <div className="mx-auto max-w-5xl text-center ">
-            <Eyebrow>Is Your Center Food Allergy Ready?</Eyebrow>
+            {/* This eyebrow is the longest on the page; size it fluidly on
+                mobile so it stays on one line (matching the Figma) and revert to
+                the standard 16px at sm+. */}
+            <Eyebrow className="whitespace-nowrap text-[clamp(10px,3vw,13px)] sm:whitespace-normal sm:text-base">
+              FOOD ALLERGY SAFETY READINESS CHECK
+            </Eyebrow>
             <h2 className="mt-4 font-serif text-[32px] font-bold leading-[1.15] text-ink sm:text-[40px]">
               Is your center food allergy ready?
             </h2>
