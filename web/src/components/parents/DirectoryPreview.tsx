@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Button } from "@/components/ui/Button";
+import { CertifyButton } from "@/components/home/CertifyButton";
 import directoryBlob from "@/../public/images/DirectoryVector.png";
 import parentsPhoto from "@/../public/images/ForParents.png";
 import parentsPhotoMobile from "@/../public/images/Intro Background Shape (1).png";
@@ -12,11 +12,8 @@ export function DirectoryPreview() {
       <h2 className="mt-3 font-serif text-[32px] font-bold text-brand-orange sm:text-[44px]">
         Certified Center Directory
       </h2>
-      <p className="mt-4 text-lg font-bold uppercase tracking-wide text-ink">
-        Coming Soon
-      </p>
       <div className="mt-8 flex justify-center">
-        <Button href="/for-parents#waitlist">Join the waitlist</Button>
+        <CertifyButton>Join the waitlist</CertifyButton>
       </div>
     </div>
   );
@@ -37,16 +34,10 @@ export function DirectoryPreview() {
           <h2 className="mt-4 whitespace-nowrap font-serif text-[26px] font-bold leading-none text-brand-orange">
             Certified Center Directory
           </h2>
-          <p className="mt-4 text-[18px] font-bold uppercase tracking-wide text-ink">
-            Coming Soon
-          </p>
-          <div className="mt-3 flex justify-center">
-            <Button
-              href="/for-parents#waitlist"
-              className="h-[48px] w-[174px] !px-0 !py-0 !text-[16px] !font-medium"
-            >
+          <div className="mt-6 flex justify-center">
+            <CertifyButton className="h-[48px] w-[174px] !px-0 !py-0 !text-[16px] !font-medium">
               Join the waitlist
-            </Button>
+            </CertifyButton>
           </div>
         </div>
 

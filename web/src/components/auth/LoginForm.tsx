@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PricingModal } from "@/components/home/PricingModal";
 
 /**
  * On-brand login form. Frontend-only: no auth provider is wired up yet, so a
@@ -10,6 +11,7 @@ import { useState } from "react";
 export function LoginForm() {
   const [values, setValues] = useState({ email: "", password: "" });
   const [notice, setNotice] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   const set = (key: keyof typeof values) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setValues((v) => ({ ...v, [key]: e.target.value }));
@@ -54,10 +56,15 @@ export function LoginForm() {
         <p className="rounded-xl bg-brand-cream px-4 py-3 text-sm text-ink">
           Accounts aren&rsquo;t live yet — sign-in opens once certification
           enrollment launches. Want early access?{" "}
-          <a href="/book-a-call" className="font-semibold text-brand-teal underline underline-offset-2">
+          <button
+            type="button"
+            onClick={() => setShowForm(true)}
+            className="font-semibold text-brand-teal underline underline-offset-2"
+          >
             Book a call
-          </a>
+          </button>
           .
+          {showForm && <PricingModal onClose={() => setShowForm(false)} />}
         </p>
       )}
 

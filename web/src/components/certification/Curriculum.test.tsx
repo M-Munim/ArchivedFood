@@ -49,11 +49,11 @@ describe("Curriculum", () => {
     ).toBeInTheDocument();
   });
 
-  it("keeps the enrollment CTA linked to booking", () => {
+  it("exposes the enrollment CTA that opens the certification form", () => {
     render(<Curriculum />);
 
     expect(
-      screen.getByRole("link", { name: "Enroll your center" }),
-    ).toHaveAttribute("href", "/book-a-call");
+      screen.getByRole("button", { name: "Enroll your center" }),
+    ).toBeInTheDocument();
   });
 });

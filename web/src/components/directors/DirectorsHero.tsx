@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { WaitlistButton } from "@/components/home/WaitlistButton";
+import { CertifyButton } from "@/components/home/CertifyButton";
 import { Notch } from "./Notch";
 import heroImg from "@/../public/images/Group 5.png";
 
@@ -41,7 +41,7 @@ export function DirectorsHero() {
             (equal width, ~60% of the frame — not the full-width stack, and not
             auto-hugging where the two ended up different sizes). */}
         <div className="mt-7 flex flex-col items-center gap-4">
-          <WaitlistButton
+          <CertifyButton
             variant="outlineLight"
             size="hero"
             className="min-h-[45px] w-[240px]"
@@ -71,7 +71,7 @@ export function DirectorsHero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <WaitlistButton variant="outlineLight" />
+            <CertifyButton variant="outlineLight" />
             <Button
               href="/for-directors#assessment"
               variant="mint"

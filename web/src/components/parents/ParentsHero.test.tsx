@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { ParentsHero } from "./ParentsHero";
 
 describe("ParentsHero", () => {
-  it("uses the supplied hero assets and submits the waitlist form in a popup", async () => {
+  it("uses the supplied hero assets and submits the certification form in a popup", async () => {
     const user = userEvent.setup();
     render(<ParentsHero />);
 
@@ -20,31 +20,26 @@ describe("ParentsHero", () => {
     ).toHaveLength(2);
 
     // The form lives in a popup — no fields until the trigger is clicked.
-    expect(screen.queryByLabelText("First name")).not.toBeInTheDocument();
+    expect(screen.queryByLabelText("Name")).not.toBeInTheDocument();
 
     await user.click(
       screen.getAllByRole("button", { name: "Join the waitlist" })[0],
     );
 
     const dialog = screen.getByRole("dialog");
-    await user.type(within(dialog).getByLabelText("First name"), "Amber");
+    await user.type(within(dialog).getByLabelText("Name"), "Amber");
     await user.type(
-      within(dialog).getByLabelText("Email address"),
+      within(dialog).getByLabelText("Email"),
       "amber@example.com",
     );
-    await user.type(within(dialog).getByLabelText("Zip code"), "10001");
     await user.click(
-      within(dialog).getByRole("button", { name: "Join the waitlist" }),
+      within(dialog).getByRole("button", { name: "Submit Request" }),
     );
 
-    // The popup swaps to a ready-to-send note for the parent's center director.
+    // The popup swaps to a success confirmation, greeting the submitter by name.
     expect(
-      within(dialog).getByRole("heading", {
-        name: "Something I’d love for our center to look into",
-      }),
+      within(dialog).getByRole("heading", { name: "Thanks, Amber!" }),
     ).toBeInTheDocument();
     expect(screen.getByRole("status")).toBeInTheDocument();
-    // The signature is auto-filled from the first-name field.
-    expect(within(dialog).getByText("Amber")).toBeInTheDocument();
   });
 });

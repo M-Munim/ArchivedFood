@@ -15,10 +15,8 @@ describe("DirectoryPreview", () => {
         name: "Certified Center Directory",
       }),
     ).toHaveLength(3);
-    screen
-      .getAllByRole("link", { name: "Join the waitlist" })
-      .forEach((link) =>
-        expect(link).toHaveAttribute("href", "/for-parents#waitlist"),
-      );
+    expect(
+      screen.getAllByRole("button", { name: "Join the waitlist" }).length,
+    ).toBeGreaterThan(0);
   });
 });

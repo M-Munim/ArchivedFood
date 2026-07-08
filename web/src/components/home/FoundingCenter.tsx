@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Button } from "@/components/ui/Button";
+import { CertifyButton } from "@/components/home/CertifyButton";
 
 const foundingDaycare = "/images/FAC_Home-HappyHearts@2x 2.png";
 
@@ -133,13 +133,9 @@ export function FoundingCenter() {
         </div>
 
         <div className="mt-7 flex flex-col items-center gap-5">
-          <Button
-            href="/book-a-call"
-            size="sm"
-            className="px-6 py-4 leading-none"
-          >
+          <CertifyButton size="sm" className="px-6 py-4 leading-none">
             Apply for a founding center spot
-          </Button>
+          </CertifyButton>
           {/* One line on mobile: the fluid clamp shrinks the text just enough
               to keep "10 SPOTS. 7 SPOKEN FOR. 3 REMAIN." on a single line across
               phone widths (whitespace-nowrap), centered; at sm+ it locks to

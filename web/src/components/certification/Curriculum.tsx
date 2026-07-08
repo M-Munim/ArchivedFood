@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-import { Button } from "@/components/ui/Button";
+import { CertifyButton } from "@/components/home/CertifyButton";
 
 type Module = {
   n: number;
@@ -195,13 +195,12 @@ export function Curriculum() {
       </p>
 
       <div className="mt-8 flex justify-center">
-        <Button
-          href="/book-a-call"
+        <CertifyButton
           variant="outline"
           className="!bg-transparent px-8 text-[18px] hover:!bg-ink sm:px-8"
         >
           Enroll your center
-        </Button>
+        </CertifyButton>
       </div>
     </section>
   );
