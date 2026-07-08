@@ -1,109 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { IoClose } from "react-icons/io5";
+import { useRef, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { NominateForm } from "./NominateForm";
+import { NominateModal } from "./NominateModal";
 import trumpet from "@/../public/images/Trumpet 1.png";
 
-const FOCUSABLE_SELECTOR =
-  'input, textarea, button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
-
-function NominationModal({ onClose }: { onClose: () => void }) {
-  const dialogRef = useRef<HTMLDivElement>(null);
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    closeButtonRef.current?.focus();
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        event.preventDefault();
-        onClose();
-        return;
-      }
-
-      if (event.key !== "Tab" || !dialogRef.current) return;
-
-      const focusable = Array.from(
-        dialogRef.current.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR),
-      );
-      if (focusable.length === 0) return;
-
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
-    }
-
-    document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [onClose]);
-
-  return (
-    <div
-      className="fixed inset-0 z-[120] flex items-center justify-center overflow-y-auto bg-brand-brightblue/95 p-6"
-      onMouseDown={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
-    >
-      <div
-        ref={dialogRef}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="nomination-dialog-title"
-        aria-describedby="nomination-dialog-description"
-        className="relative my-auto w-full max-w-[500px] rounded-2xl bg-[#effafa] px-6 pb-6 pt-5 shadow-xl"
-      >
-        <div className="flex items-start justify-between gap-4">
-          <h2
-            id="nomination-dialog-title"
-            className="font-serif text-[22px] font-bold leading-tight text-ink"
-          >
-            Nominate a childcare center
-          </h2>
-          <button
-            ref={closeButtonRef}
-            type="button"
-            onClick={onClose}
-            aria-label="Close nomination form"
-            className="-mr-1 -mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-ink transition-colors hover:bg-black/10"
-          >
-            <IoClose className="h-8 w-8" aria-hidden="true" />
-          </button>
-        </div>
-
-        <p
-          id="nomination-dialog-description"
-          className="mt-2.5 text-xs font-semibold leading-tight text-ink"
-        >
-          Help make childcare safer by nominating a center for our certification
-          program.
-        </p>
-
-        <div className="mt-4">
-          <NominateForm compact />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export function NominateCenter() {
+export function NominateCenter({
+  className = "bg-brand-brightblue",
+}: {
+  /** Section background utility. Defaults to the For Directors blue. */
+  className?: string;
+} = {}) {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef<HTMLDivElement>(null);
 
@@ -114,7 +24,9 @@ export function NominateCenter() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-brand-brightblue py-14 sm:py-16">
+      <section
+        className={`relative overflow-hidden py-14 sm:py-16 ${className}`}
+      >
         <Container className="px-6 sm:hidden">
           <div className="mx-auto max-w-[308px]">
             {/* Eyebrow spans the full width on one line (matching the Figma);
@@ -208,7 +120,7 @@ export function NominateCenter() {
         </Container>
       </section>
 
-      {isOpen && <NominationModal onClose={closeModal} />}
+      {isOpen && <NominateModal onClose={closeModal} />}
     </>
   );
 }

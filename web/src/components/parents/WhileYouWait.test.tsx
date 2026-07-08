@@ -16,7 +16,7 @@ describe("WhileYouWait", () => {
       }),
     ).toHaveClass("text-brand-blue", "sm:text-ink");
     expect(
-      screen.getByRole("link", { name: "Send my center a note" }),
-    ).toHaveAttribute("href", "/nominate");
+      screen.getByRole("button", { name: "Send my center a note" }),
+    ).toBeInTheDocument();
   });
 });

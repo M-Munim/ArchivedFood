@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { CertifyButton } from "@/components/home/CertifyButton";
+import { Button } from "@/components/ui/Button";
 import directoryBlob from "@/../public/images/DirectoryVector.png";
 import parentsPhoto from "@/../public/images/ForParents.png";
 import parentsPhotoMobile from "@/../public/images/Intro Background Shape (1).png";
@@ -13,7 +13,7 @@ export function DirectoryPreview() {
         Certified Center Directory
       </h2>
       <div className="mt-8 flex justify-center">
-        <CertifyButton>Join the waitlist</CertifyButton>
+        <Button href="/directory">Find a center</Button>
       </div>
     </div>
   );
@@ -35,9 +35,12 @@ export function DirectoryPreview() {
             Certified Center Directory
           </h2>
           <div className="mt-6 flex justify-center">
-            <CertifyButton className="h-[48px] w-[174px] !px-0 !py-0 !text-[16px] !font-medium">
-              Join the waitlist
-            </CertifyButton>
+            <Button
+              href="/directory"
+              className="h-[48px] w-[174px] !px-0 !py-0 !text-[16px] !font-medium"
+            >
+              Find a center
+            </Button>
           </div>
         </div>
 

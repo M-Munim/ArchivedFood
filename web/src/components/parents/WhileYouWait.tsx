@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Button } from "@/components/ui/Button";
+import { CertifyButton } from "@/components/home/CertifyButton";
 import waitBackdrop from "@/../public/images/Group 4.png";
 
 export function WhileYouWait() {
@@ -37,13 +37,12 @@ export function WhileYouWait() {
             </span>
           </p>
           <div className="mt-2 flex justify-center sm:mt-8">
-            <Button
-              href="/nominate"
+            <CertifyButton
               variant="mint"
               className="h-[48px] w-[228px] !bg-white !px-0 !py-0 !text-[16px] !font-medium hover:!bg-white/80 sm:h-auto sm:w-auto sm:!px-7 sm:!py-3.5 sm:!text-[17px] sm:!font-semibold"
             >
               Send my center a note
-            </Button>
+            </CertifyButton>
           </div>
         </div>
       </div>

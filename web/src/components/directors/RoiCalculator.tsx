@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import { FiHeart, FiShield, FiTrendingUp } from "react-icons/fi";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -190,15 +189,6 @@ export function RoiCalculator() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="mt-7 text-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-brand-orange px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-orange-ink focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-          >
-            See founder pricing
-          </Link>
         </div>
       </Container>
 

@@ -44,7 +44,7 @@ describe("RoiCalculator", () => {
     expect(screen.getByText("4.5 years")).toBeInTheDocument();
   });
 
-  it("matches the client calculator content and CTA", () => {
+  it("matches the client calculator content", () => {
     render(<RoiCalculator />);
 
     expect(
@@ -52,9 +52,5 @@ describe("RoiCalculator", () => {
         name: "See what one new family is worth to your center",
       }),
     ).toBeInTheDocument();
-
-    // The CTA is a plain link to the contact page (no form submit).
-    const cta = screen.getByRole("link", { name: "See founder pricing" });
-    expect(cta).toHaveAttribute("href", "/contact");
   });
 });

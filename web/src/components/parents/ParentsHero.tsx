@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { PricingModal } from "@/components/home/PricingModal";
+import { WaitlistModal } from "@/components/parents/WaitlistModal";
 import heroImg from "@/../public/images/Asset 1@4x 2.png";
 import parentWave from "@/../public/images/forParent.png";
 
@@ -112,7 +112,7 @@ export function ParentsHero() {
         </Container>
       </div>
 
-      {open && <PricingModal onClose={() => setOpen(false)} />}
+      {open && <WaitlistModal onClose={() => setOpen(false)} />}
     </section>
   );
 }
