@@ -3,7 +3,6 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { JoinCommunity } from "@/components/home/JoinCommunity";
-import { LetsGetSocial } from "@/components/home/LetsGetSocial";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -36,7 +35,6 @@ export default function ContactPage() {
       </section>
 
       <JoinCommunity />
-      <LetsGetSocial />
     </>
   );
 }

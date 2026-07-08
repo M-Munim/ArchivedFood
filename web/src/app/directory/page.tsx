@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { JoinCommunity } from "@/components/home/JoinCommunity";
-import { LetsGetSocial } from "@/components/home/LetsGetSocial";
 import directoryVector from "@/../public/images/DirectoryVector.png";
 import directoryChildren from "@/../public/images/Frame 1000012073.png";
 import directoryChildrenMobile from "@/../public/images/DirVector.png";
@@ -126,7 +125,6 @@ export default function DirectoryPage() {
       </section>
 
       <JoinCommunity />
-      <LetsGetSocial />
     </>
   );
 }

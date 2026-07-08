@@ -3,7 +3,6 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { JoinCommunity } from "@/components/home/JoinCommunity";
-import { LetsGetSocial } from "@/components/home/LetsGetSocial";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -37,7 +36,6 @@ export default function BlogPage() {
       </section>
 
       <JoinCommunity />
-      <LetsGetSocial />
     </>
   );
 }

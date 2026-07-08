@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { CertifyButton } from "@/components/home/CertifyButton";
 import { JoinCommunity } from "@/components/home/JoinCommunity";
-import { LetsGetSocial } from "@/components/home/LetsGetSocial";
 import amber from "@/../public/images/Group 1.png";
 import mobileAmber from "@/../public/images/MobileFrame 118.png";
 
@@ -117,7 +116,6 @@ export default function AmbersStoryPage() {
       </article>
 
       <JoinCommunity />
-      <LetsGetSocial />
     </>
   );
 }

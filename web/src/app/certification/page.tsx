@@ -4,7 +4,6 @@ import { Curriculum } from "@/components/certification/Curriculum";
 import { FinalAssessment } from "@/components/certification/FinalAssessment";
 import { TheBadge } from "@/components/certification/TheBadge";
 import { JoinCommunity } from "@/components/home/JoinCommunity";
-import { LetsGetSocial } from "@/components/home/LetsGetSocial";
 
 export const metadata: Metadata = {
   title: "Certification",
@@ -20,7 +19,6 @@ export default function CertificationPage() {
       <FinalAssessment />
       <TheBadge />
       <JoinCommunity />
-      <LetsGetSocial />
     </>
   );
 }
