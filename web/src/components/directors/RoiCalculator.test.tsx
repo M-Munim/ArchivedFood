@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { RoiCalculator } from "./RoiCalculator";
 
 describe("RoiCalculator", () => {
-  it("recalculates the dollar values from the sliders", () => {
+  it("recalculates the dollar values when Calculate is clicked", () => {
     render(<RoiCalculator />);
 
     // Defaults: $1,300/mo, 2.5 years -> $15,600 annual, $39,000 lifetime.
@@ -21,6 +21,12 @@ describe("RoiCalculator", () => {
       }),
       { target: { value: "3" } },
     );
+
+    // Results stay on the previous numbers until the user submits.
+    expect(screen.getByText("$15,600")).toBeInTheDocument();
+    expect(screen.getByText("$39,000")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "Calculate" }));
 
     expect(screen.getByText("$24,000")).toBeInTheDocument();
     expect(screen.getByText("$72,000")).toBeInTheDocument();

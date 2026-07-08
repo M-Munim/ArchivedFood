@@ -97,8 +97,8 @@ export function Header() {
       {/* Mobile menu */}
       {open && (
         <div className="border-t border-black/10 bg-white xl:hidden">
-          {/* pt clears the logo, which overhangs the short bar above. */}
-          <nav aria-label="Mobile" className="flex flex-col px-6 pb-6 pt-12">
+          {/* pt clears the logo, which overhangs ~76px past the short bar above. */}
+          <nav aria-label="Mobile" className="flex flex-col px-6 pb-6 pt-24">
             {[{ label: "Home", href: "/" }, ...mainNav].map((link) => {
               const isActive = pathname === link.href;
               return (

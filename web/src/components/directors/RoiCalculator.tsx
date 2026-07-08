@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { FiHeart, FiShield, FiTrendingUp } from "react-icons/fi";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Button } from "@/components/ui/Button";
 import { Notch } from "./Notch";
 
 const currency = (n: number) =>
@@ -65,10 +66,20 @@ export function RoiCalculator() {
   const [enrollment, setEnrollment] = useState(24);
   const [years, setYears] = useState(2.5);
 
+  // The results panel reflects these "committed" inputs, which only update
+  // when the director clicks Calculate — not live as the sliders move.
+  const [committed, setCommitted] = useState({
+    monthlyTuition: 1300,
+    years: 2.5,
+  });
+
   const { annualValue, lifetimeValue } = useMemo(() => {
-    const annual = Math.round(monthlyTuition * 12);
-    return { annualValue: annual, lifetimeValue: Math.round(annual * years) };
-  }, [monthlyTuition, years]);
+    const annual = Math.round(committed.monthlyTuition * 12);
+    return {
+      annualValue: annual,
+      lifetimeValue: Math.round(annual * committed.years),
+    };
+  }, [committed]);
 
   return (
     <section className="relative bg-brand-seafoam py-12 sm:py-14">
@@ -89,7 +100,13 @@ export function RoiCalculator() {
         <div className="mx-auto mt-7 max-w-[1000px] rounded-3xl bg-[#fbf8f3] p-6 text-left sm:p-10">
           <div className="grid items-start gap-8 md:grid-cols-2">
             {/* Inputs */}
-            <div className="space-y-8">
+            <form
+              className="space-y-8"
+              onSubmit={(e) => {
+                e.preventDefault();
+                setCommitted({ monthlyTuition, years });
+              }}
+            >
               <SliderRow
                 label="Monthly tuition per child"
                 min={600}
@@ -123,7 +140,10 @@ export function RoiCalculator() {
                 maxLabel="6 years"
                 displayValue={`${years} ${years === 1 ? "year" : "years"}`}
               />
-            </div>
+              <Button type="submit" className="w-full sm:w-auto">
+                Calculate
+              </Button>
+            </form>
 
             {/* Outputs */}
             <div className="space-y-4">
@@ -145,7 +165,7 @@ export function RoiCalculator() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-base text-ink/60">
-                    Over {years} years, your average stay
+                    Over {committed.years} years, your average stay
                   </span>
                   <span className="font-bold text-ink">
                     {currency(lifetimeValue)}

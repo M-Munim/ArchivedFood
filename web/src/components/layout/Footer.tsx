@@ -3,12 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { footerNav, siteConfig, socialLinks } from "@/lib/site";
 import { SocialIcon } from "./SocialIcons";
+import { NominateModal } from "@/components/directors/NominateModal";
 import logo from "@/../public/images/logo.png";
 
 export function Footer() {
   const pathname = usePathname();
+  const [nominateOpen, setNominateOpen] = useState(false);
 
   if (pathname === "/login") {
     return null;
@@ -73,6 +76,17 @@ export function Footer() {
                       </Link>
                     </li>
                   ))}
+                  <li>
+                    <button
+                      type="button"
+                      aria-haspopup="dialog"
+                      aria-expanded={nominateOpen}
+                      onClick={() => setNominateOpen(true)}
+                      className="text-left text-[15px] leading-[1.3] text-white/90 hover:text-white lg:text-[14px]"
+                    >
+                      Nominate a center
+                    </button>
+                  </li>
                 </ul>
               </div>
 
@@ -136,6 +150,10 @@ export function Footer() {
             </nav>
           </div>
       </div>
+
+      {nominateOpen && (
+        <NominateModal onClose={() => setNominateOpen(false)} />
+      )}
     </footer>
   );
 }

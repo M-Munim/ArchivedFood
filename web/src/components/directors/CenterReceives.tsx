@@ -84,12 +84,12 @@ export function CenterReceives() {
                 <FaChevronLeft className="h-5 w-5" aria-hidden="true" />
               </button>
 
-              <div className="relative mx-auto h-[200px] w-full sm:h-[280px] ">
+              <div className="relative mx-auto h-[200px] w-full sm:h-[360px] ">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  sizes="(max-width: 640px) 90vw, 640px"
+                  sizes="(max-width: 640px) 90vw, 800px"
                   className="object-contain"
                   priority={index === 0}
                 />

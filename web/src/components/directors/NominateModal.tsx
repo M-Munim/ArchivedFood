@@ -68,7 +68,7 @@ export function NominateModal({ onClose }: { onClose: () => void }) {
         aria-modal="true"
         aria-labelledby="nomination-dialog-title"
         aria-describedby="nomination-dialog-description"
-        className="relative my-auto w-full max-w-[720px] rounded-3xl bg-[#effafa] px-6 pb-7 pt-6 shadow-xl sm:px-10 sm:py-9"
+        className="relative my-auto w-full max-w-[980px] rounded-3xl bg-[#effafa] px-6 pb-7 pt-6 shadow-xl sm:px-10 sm:py-9"
       >
         <div className="flex items-start justify-between gap-4">
           <h2
