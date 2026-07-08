@@ -31,6 +31,20 @@ const PARAGRAPHS_AFTER_QUOTE = [
   "I wanted to make lemonade out of lemons. Food Allergy Certified is that lemonade.",
 ] as const;
 
+const EMPHASIZED = "Sitting there, I didn't know the word anaphylaxis.";
+
+function renderParagraph(text: string) {
+  const index = text.indexOf(EMPHASIZED);
+  if (index === -1) return text;
+  return (
+    <>
+      {text.slice(0, index)}
+      <span className="font-semibold">{EMPHASIZED}</span>
+      {text.slice(index + EMPHASIZED.length)}
+    </>
+  );
+}
+
 export default function AmbersStoryPage() {
   return (
     <>
@@ -71,7 +85,7 @@ export default function AmbersStoryPage() {
 
             <div className="mt-2 space-y-3 text-body text-ink">
               {PARAGRAPHS.map((p) => (
-                <p key={p}>{p}</p>
+                <p key={p}>{renderParagraph(p)}</p>
               ))}
 
               <p className="italic text-ink/90">

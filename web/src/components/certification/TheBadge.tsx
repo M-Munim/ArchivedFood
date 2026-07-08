@@ -5,7 +5,7 @@ export function TheBadge() {
     <section className="bg-white pb-[72px] pt-[76px]">
       <div className="mx-auto max-w-[1160px] px-6 text-center">
         <Eyebrow>The Badge</Eyebrow>
-        <h2 className="mx-auto mt-5 max-w-[620px] font-serif text-[30px] font-bold leading-[1.15] text-ink sm:text-[38px]">
+        <h2 className="mx-auto mt-5 max-w-[260px] font-serif text-[24px] font-extrabold leading-[1.15] text-ink sm:max-w-[620px] sm:text-[38px]">
           The FAC Certified badge is a promise, not a decoration.
         </h2>
         <p className="mx-auto mt-8 max-w-[1086px] text-left text-body text-ink">

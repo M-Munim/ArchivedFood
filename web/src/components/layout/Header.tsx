@@ -35,8 +35,8 @@ export function Header() {
       <div className="mx-auto flex h-[70px] w-full max-w-[1320px] items-center justify-between gap-4 px-5 py-0 sm:h-[76px] sm:px-6 lg:px-10">
         <Logo
           priority
-          width={128}
-          className="relative z-10 ml-1 mt-4 self-start [&_img]:h-auto [&_img]:w-[112px] sm:ml-0 xl:[&_img]:w-[128px]"
+          width={148}
+          className="relative z-10 ml-1 mt-6 self-start [&_img]:h-auto [&_img]:w-[128px] sm:ml-0 xl:[&_img]:w-[148px]"
         />
 
         {/* Desktop nav + actions, grouped to the right to match the design */}

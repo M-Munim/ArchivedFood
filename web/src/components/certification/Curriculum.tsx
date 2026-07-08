@@ -90,7 +90,7 @@ export function Curriculum() {
         </p>
       </div>
 
-      <div className="mx-auto mt-8 max-w-[291px] px-0 sm:hidden">
+      <div className="mx-auto mt-8 max-w-[340px] px-0 sm:hidden">
         <div className="overflow-hidden">
           <div
             id="curriculum-track-mobile"

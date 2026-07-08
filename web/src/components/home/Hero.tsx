@@ -29,7 +29,7 @@ export function Hero() {
 
       {/* Copy */}
       <div className="relative mx-auto -mt-4 max-w-[1280px] px-5 sm:mt-0 sm:px-6 lg:px-10 ">
-        <div className="mx-auto w-full max-w-[360px] pb-7 text-center sm:max-w-none sm:py-8 lg:mx-0 lg:max-w-[clamp(380px,43vw_-_40px,640px)] lg:py-20 lg:text-left">
+        <div className="mx-auto w-full max-w-[360px] pb-7 text-center sm:max-w-none sm:py-8 lg:mx-0 lg:max-w-[clamp(380px,43vw_-_40px,640px)] lg:pb-20 lg:pt-[128px] lg:text-left">
           {/* Mobile wraps are locked with `sm:hidden` breaks so the headline reads
               exactly as the Figma; the `hidden lg:block` breaks drive the desktop
               wrap. The sm/tablet range wraps naturally (both sets hidden). */}
