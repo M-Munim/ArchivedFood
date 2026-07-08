@@ -4,7 +4,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function ProblemSolution() {
   return (
-    <section className="py-16 sm:py-20">
+    <section className="pt-16 pb-12 sm:pt-20 sm:pb-[60px]">
       {/* Uses the header/hero container width (max-w-[1320px]) rather than the
           narrower shared <Container> so the columns line up with the navbar:
           text starts under the logo, right edge ends under the "Book a call"
