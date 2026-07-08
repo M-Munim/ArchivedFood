@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
+import { SuggestTopicButton } from "@/components/blog/SuggestTopicButton";
 import { JoinCommunity } from "@/components/home/JoinCommunity";
 
 export const metadata: Metadata = {
@@ -28,9 +29,7 @@ export default function BlogPage() {
 
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button href="/certification">Explore the certification</Button>
-            <Button href="/contact" variant="outline">
-              Suggest a topic
-            </Button>
+            <SuggestTopicButton />
           </div>
         </Container>
       </section>
