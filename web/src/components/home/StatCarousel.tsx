@@ -100,7 +100,7 @@ export function StatCarousel() {
               {stat.quote[1]}
             </blockquote>
 
-            <p className="mt-6 text-sm text-ink/80">{stat.source}</p>
+            <p className="mt-6 text-sm text-ink">{stat.source}</p>
           </div>
         ))}
       </div>

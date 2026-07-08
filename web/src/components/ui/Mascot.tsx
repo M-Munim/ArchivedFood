@@ -14,7 +14,7 @@ export function Mascot({
   className?: string;
 }) {
   const teal = "#4EB1A9";
-  const stroke = "#111111";
+  const stroke = "#000000";
   return (
     <svg
       viewBox="0 0 200 220"

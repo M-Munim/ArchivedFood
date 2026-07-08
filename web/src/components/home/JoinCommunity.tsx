@@ -47,7 +47,7 @@ export function JoinCommunity() {
               />
               <button
                 type="submit"
-                className="inline-flex h-[45px] w-[128px] shrink-0 items-center justify-center bg-ink px-4  font-semibold leading-none text-white transition-colors hover:bg-black/80 sm:w-[124px] sm:px-5 "
+                className="inline-flex h-[45px] w-[128px] shrink-0 items-center justify-center bg-ink px-4  font-semibold leading-none text-white transition-colors hover:bg-ink sm:w-[124px] sm:px-5 "
               >
                 Subscribe
               </button>

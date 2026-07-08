@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
+import { CertifyButton } from "@/components/home/CertifyButton";
 
 const STEPS = [
   {
@@ -102,12 +103,10 @@ export function HowItWorks() {
           ))}
         </ol>
 
-        {/* Buttons align with the step text column (badge width 80px + gap 24px
-            = 104px indent on desktop), left-aligned, matching the Figma. */}
-        <div className="mx-auto mt-12 flex max-w-[800px] flex-col gap-4 sm:flex-row sm:items-center sm:justify-start sm:pl-[104px]">
-          <Button href="/certification">Get pricing and info</Button>
+        <div className="mx-auto mt-12 flex max-w-[800px] flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+          <CertifyButton>Go to the form</CertifyButton>
           <Button href="/ambers-story" variant="outline">
-            Meet our team of experts
+            Learn more
           </Button>
         </div>
       </Container>

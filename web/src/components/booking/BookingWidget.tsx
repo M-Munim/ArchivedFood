@@ -203,7 +203,7 @@ export function BookingWidget() {
             <button
               type="button"
               onClick={() => setConfirmed(true)}
-              className="mt-6 w-full rounded-full bg-ink px-8 py-3.5 text-[17px] font-semibold text-white transition-colors hover:bg-black/80"
+              className="mt-6 w-full rounded-full bg-ink px-8 py-3.5 text-[17px] font-semibold text-white transition-colors hover:bg-ink"
             >
               Confirm {slot}
             </button>

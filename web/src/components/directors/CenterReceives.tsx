@@ -79,7 +79,7 @@ export function CenterReceives() {
                 aria-label="Previous item"
                 onClick={() => setIndex((current) => Math.max(0, current - 1))}
                 disabled={isFirst}
-                className="absolute left-0 top-1/2 z-10 hidden h-[42px] w-[42px] -translate-y-1/2 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-black/80 disabled:cursor-not-allowed disabled:bg-[#bcbcbc] sm:flex"
+                className="absolute left-0 top-1/2 z-10 hidden h-[42px] w-[42px] -translate-y-1/2 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-ink disabled:cursor-not-allowed disabled:bg-[#bcbcbc] sm:flex"
               >
                 <FaChevronLeft className="h-5 w-5" aria-hidden="true" />
               </button>
@@ -104,7 +104,7 @@ export function CenterReceives() {
                   )
                 }
                 disabled={isLast}
-                className="absolute right-0 top-1/2 z-10 hidden h-[42px] w-[42px] -translate-y-1/2 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-black/80 disabled:cursor-not-allowed disabled:bg-[#bcbcbc] sm:flex"
+                className="absolute right-0 top-1/2 z-10 hidden h-[42px] w-[42px] -translate-y-1/2 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-ink disabled:cursor-not-allowed disabled:bg-[#bcbcbc] sm:flex"
               >
                 <FaChevronRight className="h-5 w-5" aria-hidden="true" />
               </button>
@@ -129,7 +129,7 @@ export function CenterReceives() {
             aria-label="Previous item"
             onClick={() => setIndex((current) => Math.max(0, current - 1))}
             disabled={isFirst}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-black/80 disabled:cursor-not-allowed disabled:bg-[#bcbcbc]"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-ink disabled:cursor-not-allowed disabled:bg-[#bcbcbc]"
           >
             <FaChevronLeft className="h-5 w-5" aria-hidden="true" />
           </button>
@@ -142,7 +142,7 @@ export function CenterReceives() {
               )
             }
             disabled={isLast}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-black/80 disabled:cursor-not-allowed disabled:bg-[#bcbcbc]"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-ink disabled:cursor-not-allowed disabled:bg-[#bcbcbc]"
           >
             <FaChevronRight className="h-5 w-5" aria-hidden="true" />
           </button>

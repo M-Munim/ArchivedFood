@@ -122,7 +122,7 @@ export function NominateForm({ compact = false }: { compact?: boolean }) {
       <div className={compact ? "pt-1.5" : "pt-2"}>
         <button
           type="submit"
-          className={`rounded-full bg-ink font-semibold text-white transition-colors hover:bg-black/80 ${
+          className={`rounded-full bg-ink font-semibold text-white transition-colors hover:bg-ink ${
             compact
               ? "px-4 py-2.5 text-xs leading-none"
               : "px-8 py-3.5 text-[17px]"

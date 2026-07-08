@@ -6,7 +6,7 @@
   --color-brand-yellow: #ffbc00;
   --color-brand-teal: #18817a;
   --color-brand-mint: #c5efee;
-  --color-brand-peach: #fff1e1;
+  --color-brand-peach: #ffe8dc;
   --color-brand-blue: #1583e0;
   --color-brand-brightblue: #008aff;
   --color-brand-sky: #dbf0ff;
@@ -21,7 +21,7 @@
   --color-brand-orange-ink: #c25500;
   --color-brand-pink-ink: #c53a83;
 
-  --color-ink: #111111;
+  --color-ink: #000000;
   --color-ink-muted: #3f3f3f;
 
   /* Fonts */
@@ -31,7 +31,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #111111;
+  --foreground: #000000;
   --site-header-height: 139px;
 }
 
@@ -55,6 +55,7 @@ html {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {

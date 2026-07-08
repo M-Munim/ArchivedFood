@@ -92,7 +92,7 @@ export function FoundingCenter() {
             type="button"
             aria-label="Next center"
             onClick={() => go(index + 1)}
-            className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink text-white transition hover:bg-black/80 sm:flex"
+            className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink text-white transition hover:bg-ink sm:flex"
           >
             <Chevron dir="right" />
           </button>
@@ -112,7 +112,7 @@ export function FoundingCenter() {
             type="button"
             aria-label="Next center"
             onClick={() => go(index + 1)}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-ink text-white transition hover:bg-black/80"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-ink text-white transition hover:bg-ink"
           >
             <Chevron dir="right" />
           </button>

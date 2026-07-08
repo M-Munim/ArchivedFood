@@ -121,7 +121,7 @@ export function Curriculum() {
             aria-controls="curriculum-track-mobile"
             disabled={mobilePage === 0}
             onClick={() => setMobilePage((current) => Math.max(0, current - 1))}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-black/80 disabled:cursor-not-allowed disabled:bg-black/20"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-ink disabled:cursor-not-allowed disabled:bg-black/20"
           >
             <IoChevronBack className="h-7 w-7" aria-hidden="true" />
           </button>
@@ -134,7 +134,7 @@ export function Curriculum() {
             onClick={() =>
               setMobilePage((current) => Math.min(lastMobilePage, current + 1))
             }
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-black/80 disabled:cursor-not-allowed disabled:bg-black/20"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-ink disabled:cursor-not-allowed disabled:bg-black/20"
           >
             <IoChevronForward className="h-7 w-7" aria-hidden="true" />
           </button>
@@ -148,7 +148,7 @@ export function Curriculum() {
           aria-controls="curriculum-track"
           disabled={desktopPage === 0}
           onClick={() => setDesktopPage((current) => Math.max(0, current - 1))}
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-black/80 disabled:cursor-not-allowed disabled:bg-black/20"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-ink disabled:cursor-not-allowed disabled:bg-black/20"
         >
           <IoChevronBack className="h-7 w-7" aria-hidden="true" />
         </button>
@@ -182,7 +182,7 @@ export function Curriculum() {
           onClick={() =>
             setDesktopPage((current) => Math.min(lastDesktopPage, current + 1))
           }
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-black/80 disabled:cursor-not-allowed disabled:bg-black/20"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-ink text-white transition-colors hover:bg-ink disabled:cursor-not-allowed disabled:bg-black/20"
         >
           <IoChevronForward className="h-7 w-7" aria-hidden="true" />
         </button>

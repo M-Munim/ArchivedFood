@@ -13,7 +13,7 @@ function WaitlistTrigger({ onOpen }: { onOpen: () => void }) {
       <button
         type="button"
         onClick={onOpen}
-        className="h-[44px] rounded-full bg-ink px-7 text-[15px] font-medium text-white transition-colors hover:bg-black/80 focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2"
+        className="h-[44px] rounded-full bg-ink px-7 text-[15px] font-medium text-white transition-colors hover:bg-ink focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2"
       >
         Join the waitlist
       </button>

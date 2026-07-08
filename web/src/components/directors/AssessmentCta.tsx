@@ -239,7 +239,7 @@ function AssessmentModal({
 
             <Link
               href="/contact"
-              className="mt-7 inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-black/80 focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2"
+              className="mt-7 inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2"
             >
               Get your free resources
             </Link>
